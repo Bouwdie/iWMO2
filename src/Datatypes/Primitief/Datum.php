@@ -4,38 +4,54 @@ namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
+/**
+ * Class Datum
+ * @package Hyperized\Iwmo2\Datatypes\Primitief
+ */
 class Datum
 {
     use Meta;
 
-    private $beschrijving = 'Datum';
-    private $formaat = 'Y-m-d'; // 2016-02-18
+    /**
+     * @var string
+     */
+    public $beschrijving = 'Datum';
+    /**
+     * @var string
+     */
+    public $formaat = 'Y-m-d'; // 2016-02-18
+    /**
+     * @var null
+     */
     private $waarde = null;
 
+    /**
+     * Datum constructor.
+     * @param $waarde
+     */
     public function __construct($waarde) {
         $this->setWaarde($waarde);
     }
 
-    public function getWaarde(): string
-    {
+    /**
+     * @return string
+     */
+    public function getWaarde(): string {
         return $this->waarde;
     }
 
-    public function setWaarde($waarde)
+    /**
+     * @param string $waarde
+     */
+    public function setWaarde(string $waarde)
     {
-        if(!is_string($waarde))
-        {
-            throw new \Exception('Invoer waarde \''. $this->beschrijving .'\' geen string.');
+        if(\DateTime::createFromFormat($this->formaat, $waarde) === false) {
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide formaat opgegeven.');
         }
-        if(\DateTime::createFromFormat($this->formaat, $waarde) !== false)
-        {
-            $errors = \DateTime::getLastErrors();
-            if (!empty($errors['warning_count'])) {
-                throw new \Exception('Primitieve Datatype \''. $this->beschrijving .'\' met een invalide tijd buiten bereik.');
-            }
-            $this->waarde = $waarde;
-        } else {
-            throw new \Exception('Primitieve Datatype \''. $this->beschrijving .'\' met een invalide formaat opgegeven.');
+        $errors = \DateTime::getLastErrors();
+        if (!empty($errors['warning_count'])) {
+            throw new \InvalidArgumentException('Primitieve Datatype \''. $this->beschrijving .'\' met een invalide tijd buiten bereik.');
         }
+        $this->waarde = $waarde;
     }
 }

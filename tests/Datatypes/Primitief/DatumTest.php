@@ -6,37 +6,33 @@ class DateTest extends \PHPUnit_Framework_TestCase
 {
     protected $object;
 
-    protected function setUp()
+    public function testInstanceOf()
     {
-        date_default_timezone_set('Europe/Amsterdam');
         $this->object = new Datum(date('Y-m-d'));
-    }
-
-    public function testDatumInstanceOf()
-    {
         $this->assertInstanceOf(Datum::class, $this->object);
     }
 
-    public function testIncorrectRange() {
-        $this->expectException(\Exception::class);
-        $this->object->setWaarde('1700-13-32');
+    public function testCorrectRange() {
+        $this->object = new Datum('2001-12-31');
     }
 
-    public function testCorrectRange() {
-        $this->object->setWaarde('2001-12-31');
+    public function testIncorrectRange() {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->object = new Datum('1700-13-32');
     }
 
     public function testIncorrectFormat() {
-        $this->expectException(\Exception::class);
-        $this->object->setWaarde('01-01-2012');
+        $this->expectException(\InvalidArgumentException::class);
+        $this->object = new Datum('01-01-2012');
     }
 
     public function testIncorrectData() {
-        $this->expectException(\Exception::class);
-        $this->object->setWaarde(['hello', 'world', 1337]);
+        $this->expectException(\TypeError::class);
+        $this->object = new Datum(['hello', 'world', 1337]);
     }
 
     public function testGetter() {
+        $this->object = new Datum(date('Y-m-d'));
         $this->assertSame($this->object->getWaarde(), date('Y-m-d'));
     }
 }
