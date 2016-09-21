@@ -4,11 +4,9 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-class COD002 implements Enumeration
+class COD002 extends AbstractEnumeration
 {
     use Meta;
-    private $titel = "BERICHT";
-    private $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
 
     const code = [
         414 => 'Toewijzing Wmo-ondersteuning',
@@ -25,24 +23,8 @@ class COD002 implements Enumeration
         449 => 'Factuur Wmo-ondersteuning Retour',
     ];
 
+    private $titel = "BERICHT";
+    private $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
 
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
 
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }
