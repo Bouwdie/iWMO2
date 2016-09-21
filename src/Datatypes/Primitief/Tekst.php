@@ -2,6 +2,7 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
+use Hyperized\Iwmo2\Codelijsten\Enumeration;
 use Hyperized\Iwmo2\Generiek\Meta;
 
 /**
@@ -130,20 +131,30 @@ class Tekst
 
     /**
      * @param string $enumerations
+     *
+     * @throws \InvalidArgumentException
      */
     public function setEnumerations(string $enumerations)
     {
         $enumName = 'Hyperized\\Iwmo2\\Codelijsten\\'.$enumerations; // ew
-        try {
-            $enum = new $enumName();
-            if(!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
-                throw new \InvalidArgumentException('Opgegeven waarde niet in '.$enumerations.' lijst.');
-            }
-            $this->enumerations = $enum;
-            $this->setEnumWaarde();
-        } catch (\Throwable $t) {
-            throw new \InvalidArgumentException('Opgegeven lijst '.$enumerations.' bestaat niet.');
+
+        if (!class_exists($enumName)) {
+            throw new \InvalidArgumentException('Opgegeven lijst ' . $enumerations . ' bestaat niet.');
         }
+
+        if (!in_array(Enumeration::class, class_implements($enumName), true)) {
+            throw new \InvalidArgumentException('Opgegeven lijst ' . $enumerations . ' bestaat niet.');
+        }
+
+        /** @var Enumeration $enum $enum */
+        $enum = new $enumName();
+
+        if(!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
+            throw new \InvalidArgumentException('Opgegeven waarde niet in '.$enumerations.' lijst.');
+        }
+
+        $this->enumerations = $enum;
+        $this->setEnumWaarde();
     }
 
     /**
