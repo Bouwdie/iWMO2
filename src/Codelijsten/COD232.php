@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD232
+class COD232 implements Enumeration
 {
     use Meta;
     private $titel = "JURIDISCHE STATUS";
@@ -24,4 +24,25 @@ abstract class COD232
         '11' => "Strafrechterlijke justitiële contacten: tbs",
         '12' => "Strafrechterlijke justitiële contacten: overig",
     ];
+
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

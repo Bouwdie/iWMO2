@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD825
+class COD825 implements Enumeration
 {
     use Meta;
     private $titel = "VRAAG BEPERKING";
@@ -77,4 +77,24 @@ abstract class COD825
         '0610' => "Deelname onderwijs, werk - Betaald werk doen: deeltijd",
         '0611' => "Deelname onderwijs, werk - Niet-betaald werk doen in vrijwillige verbanden",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

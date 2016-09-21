@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD472
+class COD472 implements Enumeration
 {
     use Meta;
     private $titel = "SOORT RELATIE";
@@ -35,4 +35,24 @@ abstract class COD472
         '24' => "Werkgever",
         '25' => "Wijkcoach",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

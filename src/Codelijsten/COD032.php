@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD032
+class COD032 implements Enumeration
 {
     use Meta;
     private $titel = "LAND";
@@ -261,4 +261,25 @@ abstract class COD032
         'ZM' => "ZAMBIA",
         'ZW' => "ZIMBABWE",
     ];
+
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

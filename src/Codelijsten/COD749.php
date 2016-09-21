@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-class COD749
+class COD749 implements Enumeration
 {
     use Meta;
     private $titel = "DUUR";
@@ -16,4 +16,24 @@ class COD749
         3 => "Zes tot twaalf maanden",
         4 => "Langer dan een jaar",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

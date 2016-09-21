@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD172
+class COD172 implements Enumeration
 {
     use Meta;
     private $titel = "REDEN INTREKKING";
@@ -17,4 +17,25 @@ abstract class COD172
         4 => "Overplaatsing",
         6 => "Uitstroom",
     ];
+
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

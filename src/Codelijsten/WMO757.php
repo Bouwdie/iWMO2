@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class WMO757
+class WMO757 implements Enumeration
 {
     use Meta;
     private $titel = "FREQUENTIE";
@@ -18,4 +18,24 @@ abstract class WMO757
         5 => "Per jaar",
         6 => "Totaal binnen geldigheidsduur beschikking",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

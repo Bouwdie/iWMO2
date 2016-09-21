@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD700
+class COD700 implements Enumeration
 {
     use Meta;
     private $titel = "NAAMCODE";
@@ -17,4 +17,24 @@ abstract class COD700
         4 => 'Eigen naam gevolgd door naam echtgenoot of geregistreerd partner',
         5 => 'Pseudoniem',
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

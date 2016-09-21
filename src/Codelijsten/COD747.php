@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD747
+class COD747 implements Enumeration
 {
     use Meta;
     private $titel = "COMMUNICATIEVORM";
@@ -15,4 +15,24 @@ abstract class COD747
         2 => 'Doventolk',
         3 => 'Doofblindentolk',
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

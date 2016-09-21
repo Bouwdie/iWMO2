@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-class WMO020
+class WMO020 implements Enumeration
 {
     use Meta;
     private $titel = "PRODUCTCATEGORIE";
@@ -30,4 +30,24 @@ class WMO020
         '17' => "Spoedopvang",
         '18' => "Overige beschermd wonen en opvang",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

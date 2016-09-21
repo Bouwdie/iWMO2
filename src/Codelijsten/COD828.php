@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD828
+class COD828 implements Enumeration
 {
     use Meta;
     private $titel = "SCORE VRAAG BEPERKING";
@@ -17,4 +17,24 @@ abstract class COD828
         3 => "Kan dit niet zelfstandig/iemand anders moet dit overnemen",
         9 => "Niet beoordeeld",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

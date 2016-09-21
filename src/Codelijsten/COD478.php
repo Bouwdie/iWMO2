@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD478
+class COD478 implements Enumeration
 {
     use Meta;
     private $titel = "LEEFEENHEID";
@@ -20,4 +20,24 @@ abstract class COD478
         7 => "WOONT IN EEN ZORGINSTELLING MET VERBLIJF",
         9 => "ONBEKEND",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD757
+class COD757 implements Enumeration
 {
     use Meta;
     private $titel = "SOORT ADRES";
@@ -16,4 +16,24 @@ abstract class COD757
         3 => "Verblijfadres",
         4 => "Tijdelijk verblijfadres",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

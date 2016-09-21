@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class WMO588
+class WMO588 implements Enumeration
 {
     use Meta;
     private $titel = "REDENBEEINDIGING";
@@ -19,4 +19,24 @@ abstract class WMO588
         '33' => "Voortzetting in Zvw",
         '34' => "Voortzetting in Wlz",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

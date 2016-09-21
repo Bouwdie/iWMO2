@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD366
+class COD366 implements Enumeration
 {
     use Meta;
     private $titel = "BURGERLIJKE STAAT";
@@ -20,4 +20,24 @@ abstract class COD366
         7 => "Achtergebleven geregistreerd partner",
         9 => "Ongehuwd en geen geregistreerd partner, eventueel wel gehuwd of geregistreerd partner geweest",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

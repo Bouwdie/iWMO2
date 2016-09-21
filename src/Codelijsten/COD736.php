@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class COD736
+class COD736 implements Enumeration
 {
     use Meta;
     private $titel = "GRONDSLAG ZORG";
@@ -19,4 +19,24 @@ abstract class COD736
         '06' => "ZINTUIGLIJKE HANDICAP (FUNCTIESTOORNIS)",
         '07' => "PSYCHOSOCIALE PROBLEMEN",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }

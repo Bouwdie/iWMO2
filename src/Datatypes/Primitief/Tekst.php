@@ -35,6 +35,10 @@ class Tekst
     /**
      * @var null
      */
+    private $enumWaarde = null;
+    /**
+     * @var null
+     */
     private $pattern = null;
 
     /**
@@ -135,10 +139,28 @@ class Tekst
             if(!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
                 throw new \InvalidArgumentException('Opgegeven waarde niet in '.$enumerations.' lijst.');
             }
-            $this->enumerations = $enumerations;
+            $this->enumerations = $enum;
+            $this->setEnumWaarde();
         } catch (\Throwable $t) {
-            throw new \InvalidArgumentException('Opgegeven lijst '.$enumerations.' bestaat nioet.');
+            throw new \InvalidArgumentException('Opgegeven lijst '.$enumerations.' bestaat niet.');
         }
+    }
+
+    /**
+     * @return null
+     */
+    public function getEnumWaarde(): string
+    {
+        return $this->enumWaarde;
+    }
+
+    /**
+     * @param null $enumWaarde
+     */
+    public function setEnumWaarde()
+    {
+        $enumWaarde = $this->enumerations->getWaarde();
+        $this->enumWaarde = $enumWaarde[$this->waarde];
     }
 
     /**

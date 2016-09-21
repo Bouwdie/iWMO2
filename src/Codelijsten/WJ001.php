@@ -4,7 +4,7 @@ namespace Hyperized\Iwmo2\Codelijsten;
 
 use Hyperized\Iwmo2\Generiek\Meta;
 
-abstract class WJ001
+class WJ001 implements Enumeration
 {
     use Meta;
     private $titel = "RETOURCODE";
@@ -439,4 +439,24 @@ abstract class WJ001
         '9091' => "Bericht voldoet niet aan technische regel 91",
         '9097' => "Bericht voldoet niet aan technische regel 97",
     ];
+
+    public function __construct() {
+        $this->setWaarde(self::code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getWaarde(): array
+    {
+        return $this->waarde;
+    }
+
+    /**
+     * @param array $waarde
+     */
+    public function setWaarde(array $waarde)
+    {
+        $this->waarde = $waarde;
+    }
 }
