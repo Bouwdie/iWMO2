@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD032 implements Enumeration
+/**
+ * Class COD032
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD032 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "LAND";
+    /**
+     * @var string
+     */
     private $beschrijving = "Identificatie van een (historisch/actueel) land of gebiedsdeel.";
 
+    /**
+     * Land
+     */
     const code = [
         'AD' => "ANDORRA",
         'AE' => "VERENIGDE ARABISCHE EMIRATEN",
@@ -261,25 +271,4 @@ class COD032 implements Enumeration
         'ZM' => "ZAMBIA",
         'ZW' => "ZIMBABWE",
     ];
-
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

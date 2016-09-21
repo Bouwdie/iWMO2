@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class WJ001 implements Enumeration
+/**
+ * Class WJ001
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class WJ001 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "RETOURCODE";
+    /**
+     * @var string
+     */
     private $beschrijving = "Melding in een retourbericht. Het betreft een code die in een retourbericht het resultaat van de beoordeling van een (deel van een) ontvangen bericht weergeeft.";
 
+    /**
+     * Retourcode
+     */
     const code = [
         '0001' => "Bericht is afgekeurd om technische redenen.",
         '0002' => "KENMERK RECORD ontbreekt of is onjuist.",
@@ -439,24 +449,4 @@ class WJ001 implements Enumeration
         '9091' => "Bericht voldoet niet aan technische regel 91",
         '9097' => "Bericht voldoet niet aan technische regel 97",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

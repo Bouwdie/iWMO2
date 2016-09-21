@@ -50,22 +50,24 @@ class Tekst
      * @param int|null $maxLength
      * @param string|null $pattern
      */
-    public function __construct(string $waarde,
-                                string $restrictions = null,
-                                string $enumeration = null,
-                                int $maxLength = null,
-                                string $pattern = null) {
-        if(!is_null($maxLength)) {
+    public function __construct(
+        string $waarde,
+        string $restrictions = null,
+        string $enumeration = null,
+        int $maxLength = null,
+        string $pattern = null
+    ) {
+        if (!is_null($maxLength)) {
             $this->setMaxLength($maxLength);
         }
         $this->setWaarde($waarde);
-        if(!is_null($restrictions)) {
+        if (!is_null($restrictions)) {
             $this->setRestrictions($restrictions);
         }
-        if(!is_null($enumeration)) {
+        if (!is_null($enumeration)) {
             $this->setEnumerations($enumeration);
         }
-        if(!is_null($pattern)) {
+        if (!is_null($pattern)) {
             $this->setPattern($pattern);
         }
     }
@@ -83,8 +85,8 @@ class Tekst
      */
     public function setWaarde($waarde)
     {
-        if(strlen($waarde) > $this->maxLength) {
-            throw new \InvalidArgumentException('Opgegeven waarde is groter dan ' . $this->maxLength .' in primitief datatype ' .$this->beschrijving);
+        if (strlen($waarde) > $this->maxLength) {
+            throw new \InvalidArgumentException('Opgegeven waarde is groter dan ' . $this->maxLength . ' in primitief datatype ' . $this->beschrijving);
         }
         $this->waarde = $waarde;
     }
@@ -136,7 +138,7 @@ class Tekst
      */
     public function setEnumerations(string $enumerations)
     {
-        $enumName = 'Hyperized\\Iwmo2\\Codelijsten\\'.$enumerations; // ew
+        $enumName = 'Hyperized\\Iwmo2\\Codelijsten\\' . $enumerations; // ew
 
         if (!class_exists($enumName)) {
             throw new \InvalidArgumentException('Opgegeven lijst ' . $enumerations . ' bestaat niet.');
@@ -149,8 +151,8 @@ class Tekst
         /** @var Enumeration $enum $enum */
         $enum = new $enumName();
 
-        if(!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
-            throw new \InvalidArgumentException('Opgegeven waarde niet in '.$enumerations.' lijst.');
+        if (!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
+            throw new \InvalidArgumentException('Opgegeven waarde niet in ' . $enumerations . ' lijst.');
         }
 
         $this->enumerations = $enum;
@@ -158,7 +160,7 @@ class Tekst
     }
 
     /**
-     * @return null
+     * @return null|string
      */
     public function getEnumWaarde(): string
     {
@@ -166,7 +168,7 @@ class Tekst
     }
 
     /**
-     * @param null $enumWaarde
+     * @internal param null $enumWaarde
      */
     public function setEnumWaarde()
     {

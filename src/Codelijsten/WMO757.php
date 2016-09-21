@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class WMO757 implements Enumeration
+/**
+ * Class WMO757
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class WMO757 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "FREQUENTIE";
+    /**
+     * @var string
+     */
     private $beschrijving = "Frequentie van de te leveren of geleverde ondersteuning.";
 
+    /**
+     * Frequentie
+     */
     const code = [
         1 => "Per dag",
         2 => "Per week",
@@ -18,24 +28,4 @@ class WMO757 implements Enumeration
         5 => "Per jaar",
         6 => "Totaal binnen geldigheidsduur beschikking",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

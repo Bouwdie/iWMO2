@@ -22,7 +22,8 @@ class BurgelijkeStaat
      * BurgelijkeStaat constructor.
      * @param string $waarde
      */
-    public function __construct(string $waarde) {
+    public function __construct(string $waarde)
+    {
         $this->setWaarde($waarde);
     }
 
@@ -35,7 +36,7 @@ class BurgelijkeStaat
     }
 
     /**
-     * @param Tekst|null $waarde
+     * @param Tekst|null|string $waarde
      */
     public function setWaarde(string $waarde)
     {

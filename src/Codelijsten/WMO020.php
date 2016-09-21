@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class WMO020 implements Enumeration
+/**
+ * Class WMO020
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class WMO020 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "PRODUCTCATEGORIE";
+    /**
+     * @var string
+     */
     private $beschrijving = "Gecodeerde aanduiding van een (reeks van) productcategorie(ën) in functionele termen die losgekoppeld is van een bepaalde leverancier, waarbij wordt beschreven wat de inhoud en aard van de productcategorie is in termen van hulpverlening (wonen, zorg en welzijn).";
 
+    /**
+     * Productcategorie
+     */
     const code = [
         '01' => "Hulp bij het huishouden",
         '02' => "Begeleiding",
@@ -30,24 +40,4 @@ class WMO020 implements Enumeration
         '17' => "Spoedopvang",
         '18' => "Overige beschermd wonen en opvang",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

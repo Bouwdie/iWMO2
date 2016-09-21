@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD736 implements Enumeration
+/**
+ * Class COD736
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD736 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "GRONDSLAG ZORG";
+    /**
+     * @var string
+     */
     private $beschrijving = "Codering die aangeeft wat ten grondslag ligt aan de zorg.";
 
+    /**
+     * Grondslag zorg
+     */
     const code = [
         '01' => "SOMATISCHE ZIEKTE/AANDOENING",
         '02' => "PSYCHOGERIATRISCHE ZIEKTE/AANDOENING",
@@ -19,24 +29,4 @@ class COD736 implements Enumeration
         '06' => "ZINTUIGLIJKE HANDICAP (FUNCTIESTOORNIS)",
         '07' => "PSYCHOSOCIALE PROBLEMEN",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

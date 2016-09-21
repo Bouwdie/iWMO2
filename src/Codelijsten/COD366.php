@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD366 implements Enumeration
+/**
+ * Class COD366
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD366 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "BURGERLIJKE STAAT";
+    /**
+     * @var string
+     */
     private $beschrijving = "Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.";
 
+    /**
+     * Burgelijke staat
+     */
     const code = [
         1 => "Ongehuwd en geen geregistreerd partner en nooit gehuwd of geregistreerd partner geweest",
         2 => "Gehuwd",
@@ -20,24 +30,4 @@ class COD366 implements Enumeration
         7 => "Achtergebleven geregistreerd partner",
         9 => "Ongehuwd en geen geregistreerd partner, eventueel wel gehuwd of geregistreerd partner geweest",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

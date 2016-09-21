@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class WMO588 implements Enumeration
+/**
+ * Class WMO588
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class WMO588 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "REDENBEEINDIGING";
+    /**
+     * @var string
+     */
     private $beschrijving = "De reden van beëindiging van de Wmo-ondersteuning bij een cliënt.";
 
+    /**
+     * Reden beeindiging
+     */
     const code = [
         '02' => "Overlijden",
         '19' => "Levering zorg of ondersteuning is beëindigd - toewijzing sluiten",
@@ -19,24 +29,4 @@ class WMO588 implements Enumeration
         '33' => "Voortzetting in Zvw",
         '34' => "Voortzetting in Wlz",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

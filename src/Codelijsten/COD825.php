@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD825 implements Enumeration
+/**
+ * Class COD825
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD825 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "VRAAG BEPERKING";
+    /**
+     * @var string
+     */
     private $beschrijving = "Gecodeerde aanduiding van de vraag over beperking.";
 
+    /**
+     * Vraag beperking
+     */
     const code = [
         '0101' => "Sociale redzaamheid - Problemen oplossen, besluiten nemen en gevolgen inschatten",
         '0102' => "Sociale redzaamheid - Initiëren + uitvoeren van eenvoudige taken (bv. eten maken, de was doen)",
@@ -77,24 +87,4 @@ class COD825 implements Enumeration
         '0610' => "Deelname onderwijs, werk - Betaald werk doen: deeltijd",
         '0611' => "Deelname onderwijs, werk - Niet-betaald werk doen in vrijwillige verbanden",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

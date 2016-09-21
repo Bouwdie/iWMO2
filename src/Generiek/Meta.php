@@ -1,48 +1,44 @@
 <?php
 
-namespace Hyperized\Iwmo2;
 namespace Hyperized\Iwmo2\Generiek;
 
+/**
+ * Class Meta
+ * @package Hyperized\Iwmo2\Generiek
+ */
 trait Meta
 {
-    public function geefWmoCode()
+    /**
+     * @return bool|string
+     */
+    public function getWmoCode()
     {
         $reflection = new \ReflectionClass($this);
-        $trimmedClass =  ltrim($reflection->getShortName(), 'WMO');
-        if(is_numeric($trimmedClass)) {
+        $trimmedClass = ltrim($reflection->getShortName(), 'WMO');
+        if (is_numeric($trimmedClass)) {
             return $trimmedClass;
         } else {
             return false;
         }
     }
 
-    public function geefWmoCodeWeer()
-    {
-        echo $this->geefWmoCode()."\n";
-    }
-
-    public function geefBeschrijving()
+    /**
+     * @return mixed
+     */
+    public function getBeschrijving()
     {
         return $this->beschrijving;
     }
 
-    public function geefBeschrijvingWeer()
+    /**
+     * @return string
+     */
+    public function getTitel()
     {
-        echo $this->beschrijving."\n";
-    }
-
-    public function geefTitel()
-    {
-        if(!isset($this->titel))
-        {
+        if (!isset($this->titel)) {
             $reflection = new \ReflectionClass($this);
             $this->titel = $reflection->getShortName();
         }
         return $this->titel;
-    }
-
-    public function geefTitelWeer()
-    {
-        echo $this->geefTitel()."\n";
     }
 }

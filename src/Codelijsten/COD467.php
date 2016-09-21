@@ -2,38 +2,28 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD467 implements Enumeration
+/**
+ * Class COD467
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD467 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "STATUS AANLEVERING";
+    /**
+     * @var string
+     */
     private $beschrijving = "Indicatie over de status van de informatie in het record.";
 
+    /**
+     * Status aanlevering
+     */
     const code = [
         1 => "Eerste aanlevering",
         2 => "Gewijzigde aanlevering",
         3 => "Verwijderen aanlevering",
         9 => "Niet van toepassing (ongewijzigd)",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

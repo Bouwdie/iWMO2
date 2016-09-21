@@ -29,14 +29,16 @@ class Datum
      * Datum constructor.
      * @param $waarde
      */
-    public function __construct($waarde) {
+    public function __construct($waarde)
+    {
         $this->setWaarde($waarde);
     }
 
     /**
      * @return string
      */
-    public function getWaarde(): string {
+    public function getWaarde(): string
+    {
         return $this->waarde;
     }
 
@@ -45,12 +47,12 @@ class Datum
      */
     public function setWaarde(string $waarde)
     {
-        if(\DateTime::createFromFormat($this->formaat, $waarde) === false) {
+        if (\DateTime::createFromFormat($this->formaat, $waarde) === false) {
             throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide formaat opgegeven.');
         }
         $errors = \DateTime::getLastErrors();
         if (!empty($errors['warning_count'])) {
-            throw new \InvalidArgumentException('Primitieve Datatype \''. $this->beschrijving .'\' met een invalide tijd buiten bereik.');
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide tijd buiten bereik.');
         }
         $this->waarde = $waarde;
     }

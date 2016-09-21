@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD172 implements Enumeration
+/**
+ * Class COD172
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD172 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "REDEN INTREKKING";
+    /**
+     * @var string
+     */
     private $beschrijving = "De reden waarom een toewijzing wordt ingetrokken.";
 
+    /**
+     * Reden uitkering
+     */
     const code = [
         1 => "Cliënt overleden",
         2 => "Negatief indicatiebesluit",
@@ -17,25 +27,4 @@ class COD172 implements Enumeration
         4 => "Overplaatsing",
         6 => "Uitstroom",
     ];
-
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

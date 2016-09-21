@@ -2,37 +2,26 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD260 implements Enumeration
+/**
+ * Class COD260
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD260 extends AbstractEnumeration
 {
-    use Meta;
-    private $titel = "JURIDISCHE STATUS";
+    /**
+     * @var string
+     */
+    private $titel = "JA OF NEE";
+    /**
+     * @var string
+     */
     private $beschrijving = "Codering voor ja of nee.";
 
+    /**
+     * Ja of Nee
+     */
     const code = [
         1 => 'Ja',
         2 => 'Nee',
     ];
-
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

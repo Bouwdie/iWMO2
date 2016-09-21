@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD232 implements Enumeration
+/**
+ * Class COD232
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD232 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "JURIDISCHE STATUS";
+    /**
+     * @var string
+     */
     private $beschrijving = "Juridische situatie die voor de cliënt van toepassing is op het moment van indicatiestelling.";
 
+    /**
+     * Juridische status
+     */
     const code = [
         '01' => "Rechterlijke machtiging (rm) voorlopig / voortgezette machtiging",
         '02' => "RM op eigen verzoek",
@@ -24,25 +34,4 @@ class COD232 implements Enumeration
         '11' => "Strafrechterlijke justitiële contacten: tbs",
         '12' => "Strafrechterlijke justitiële contacten: overig",
     ];
-
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

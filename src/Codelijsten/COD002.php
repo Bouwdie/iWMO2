@@ -2,12 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
+/**
+ * Class COD002
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
 class COD002 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
+    private $titel = "BERICHT";
+    /**
+     * @var string
+     */
+    private $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
 
+    /**
+     * Bericht
+     */
     const code = [
         414 => 'Toewijzing Wmo-ondersteuning',
         415 => 'Toewijzing Wmo-ondersteuning Retour',
@@ -22,9 +34,4 @@ class COD002 extends AbstractEnumeration
         448 => 'Factuur Wmo-ondersteuning',
         449 => 'Factuur Wmo-ondersteuning Retour',
     ];
-
-    private $titel = "BERICHT";
-    private $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
-
-
 }

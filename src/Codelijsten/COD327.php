@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD327 implements Enumeration
+/**
+ * Class COD327
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD327 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "CODE VERWIJZER";
+    /**
+     * @var string
+     */
     private $beschrijving = "Aanduiding van de aard van de (zelf)verwijzer.";
 
+    /**
+     * Code verwijzer
+     */
     const code = [
         '01' => "Gemeente",
         '02' => "Huisarts",
@@ -20,25 +30,4 @@ class COD327 implements Enumeration
         '07' => "Onbekend",
         '08' => "Rechter, Raad voor de Kinderbescherming of Officier van Justitie",
     ];
-
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

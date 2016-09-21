@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class WMO756 implements Enumeration
+/**
+ * Class WMO756
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class WMO756 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "EENHEID";
+    /**
+     * @var string
+     */
     private $beschrijving = "Gecodeerde aanduiding van de mate van zorg betreffende een product, uitgedrukt in een eenheid.";
 
+    /**
+     * Eenheid
+     */
     const code = [
         '01' => "Minuut",
         '04' => "Uur",
@@ -18,24 +28,4 @@ class WMO756 implements Enumeration
         '82' => "Stuks",
         '83' => "Euro's",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }

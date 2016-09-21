@@ -2,14 +2,24 @@
 
 namespace Hyperized\Iwmo2\Codelijsten;
 
-use Hyperized\Iwmo2\Generiek\Meta;
-
-class COD472 implements Enumeration
+/**
+ * Class COD472
+ * @package Hyperized\Iwmo2\Codelijsten
+ */
+class COD472 extends AbstractEnumeration
 {
-    use Meta;
+    /**
+     * @var string
+     */
     private $titel = "SOORT RELATIE";
+    /**
+     * @var string
+     */
     private $beschrijving = "De soort relatie die een persoon ten opzichte van de cliënt heeft.";
 
+    /**
+     * Soort relatie
+     */
     const code = [
         '03' => "Curator (juridisch)",
         '04' => "Financieel (gemachtigd)",
@@ -35,24 +45,4 @@ class COD472 implements Enumeration
         '24' => "Werkgever",
         '25' => "Wijkcoach",
     ];
-
-    public function __construct() {
-        $this->setWaarde(self::code);
-    }
-
-    /**
-     * @return array
-     */
-    public function getWaarde(): array
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param array $waarde
-     */
-    public function setWaarde(array $waarde)
-    {
-        $this->waarde = $waarde;
-    }
 }
