@@ -52,7 +52,6 @@ class Tekst
      */
     public function __construct(
         string $waarde,
-        string $restrictions = null,
         string $enumeration = null,
         int $maxLength = null,
         string $pattern = null
@@ -61,9 +60,6 @@ class Tekst
             $this->setMaxLength($maxLength);
         }
         $this->setWaarde($waarde);
-        if (!is_null($restrictions)) {
-            $this->setRestrictions($restrictions);
-        }
         if (!is_null($enumeration)) {
             $this->setEnumerations($enumeration);
         }
@@ -105,22 +101,6 @@ class Tekst
     public function getMaxLength(): int
     {
         return $this->maxLength;
-    }
-
-    /**
-     * @return string
-     */
-    public function getRestrictions(): string
-    {
-        return $this->restrictions;
-    }
-
-    /**
-     * @param string $restrictions
-     */
-    public function setRestrictions(string $restrictions)
-    {
-        $this->restrictions = $restrictions;
     }
 
     /**
@@ -189,6 +169,10 @@ class Tekst
      */
     public function setPattern(string $pattern)
     {
+        preg_match('/'.$pattern.'/', $this->waarde, $matches);
+        if(!in_array($this->waarde, $matches)) {
+            throw new \InvalidArgumentException('Opgegeven waarde past niet in patroon: '.$pattern.'.');
+        }
         $this->pattern = $pattern;
     }
 }

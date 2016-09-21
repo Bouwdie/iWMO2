@@ -23,34 +23,40 @@ class TekstTest extends \PHPUnit_Framework_TestCase
         $this->object = new Tekst(['Hallo Wereld'], null, null, null, null);
     }
 
-    // restrictions
-
     // enumerations
     public function testCorrectEnum() {
-        $this->object = new Tekst('AB', null, 'NUM061', null, null);
+        $this->object = new Tekst('AB', 'NUM061', null, null);
     }
 
     public function testIncorrectEnumName() {
         $this->expectException(\InvalidArgumentException::class);
-        $this->object = new Tekst('AB', null, 'NUM016', null, null);
+        $this->object = new Tekst('AB', 'NUM016', null, null);
     }
 
     public function testIncorrectEnumValue() {
         $this->expectException(\InvalidArgumentException::class);
-        $this->object = new Tekst('ABC', null, 'NUM061', null, null);
+        $this->object = new Tekst('ABC', 'NUM061', null, null);
     }
 
     // maxLength
     public function testCorrectMaxLength() {
-        $this->object = new Tekst('Hallo Wereld', null, null, 12, null);
+        $this->object = new Tekst('Hallo Wereld', null, 12, null);
     }
 
     public function testIncorrectMaxLength() {
         $this->expectException(\InvalidArgumentException::class);
-        $this->object = new Tekst('Hallo Wereld', null, null, 10, null);
+        $this->object = new Tekst('Hallo Wereld', null, 10, null);
     }
 
     // pattern
+    public function testCorrectPattern() {
+        $this->object = new Tekst('12345678', null, 8, '[0-9]{8}');
+    }
+
+    public function testIncorrectPatternMatch() {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->object = new Tekst('123456789', null, 9, '[0-9]{8}');
+    }
 
 }
 

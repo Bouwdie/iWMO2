@@ -1,17 +1,22 @@
 <?php
-
 namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
 use Hyperized\Iwmo2\Datatypes\Primitief\Tekst;
 use Hyperized\Iwmo2\Generiek\Meta;
 
 /**
- * Class BurgelijkeStaat
+ * Class AgbCode
+ *    Identificerende code van een instelling.
  * @package Hyperized\Iwmo2\Datatypes\Logisch
  */
-class BurgelijkeStaat
+class AgbCode
 {
     use Meta;
+
+    /**
+     * @var string
+     */
+    private $beschrijving = 'Identificerende code van een instelling.';
 
     /**
      * @var null
@@ -19,7 +24,7 @@ class BurgelijkeStaat
     private $waarde = null;
 
     /**
-     * BurgelijkeStaat constructor.
+     * AgbCode constructor.
      * @param string $waarde
      */
     public function __construct(string $waarde)
@@ -40,7 +45,6 @@ class BurgelijkeStaat
      */
     public function setWaarde(string $waarde)
     {
-        $this->waarde = new Tekst($waarde, 'COD366', 1, null);
+        $this->waarde = new Tekst($waarde, null, 8, '[0-9]{8}');
     }
-
 }
