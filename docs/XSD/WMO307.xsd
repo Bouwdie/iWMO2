@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.istandaarden.nl/iwmo/2_1/wmo307/schema/2_1" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wmo307="http://www.istandaarden.nl/iwmo/2_1/wmo307/schema/2_1" xmlns:iwmo="http://www.istandaarden.nl/iwmo/2_1/basisschema/schema/2_1">
+	<xs:import namespace="http://www.istandaarden.nl/iwmo/2_1/basisschema/schema/2_1" schemaLocation="basisschema.xsd"></xs:import>
+	<xs:element name="Bericht" type="wmo307:Root"></xs:element>
+	<xs:complexType name="Root">
+
+		<xs:sequence>
+			<xs:element name="Header" type="wmo307:Header"></xs:element>
+			<xs:element name="Clienten" type="wmo307:Clienten"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Header">
+
+		<xs:sequence>
+			<xs:element name="BerichtCode">
+				<xs:annotation>
+					<xs:documentation>Code ter identificatie van een soort bericht.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base ="iwmo:LDT_BerichtCode">
+						<xs:pattern value ="420"/>
+					</xs:restriction>
+				</xs:simpleType>
+
+			</xs:element>
+			<xs:element name="BerichtVersie" type="iwmo:LDT_BerichtVersie">
+				<xs:annotation>
+					<xs:documentation>Volgnummer van de formele uitgifte van een versie van een (externe-integratie) berichtstandaard.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="BerichtSubversie" type="iwmo:LDT_BerichtSubversie">
+				<xs:annotation>
+					<xs:documentation>Volgnummer binnen het versienummer van een (externe-integratie) berichtstandaard.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Afzender" type="iwmo:LDT_AgbCode">
+				<xs:annotation>
+					<xs:documentation>Identificerende code van een Wmo aanbieder.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Ontvanger" type="iwmo:LDT_Gemeente">
+				<xs:annotation>
+					<xs:documentation>Identificatie van een gemeente die betrokken is bij de uitvoering van de Wet maatschappelijke ondersteuning (Wmo).</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="BerichtIdentificatie" type="iwmo:CDT_BerichtIdentificatie">
+				<xs:annotation>
+					<xs:documentation>Naam of nummer en dagtekening ter identificatie van een totale aanlevering.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Clienten">
+		<xs:sequence>
+			<xs:element name="Client" type="wmo307:Client" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Client">
+		<xs:annotation>
+			<xs:documentation>Het clientrecord bevat persoonsgegevens van de client.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Bsn" type="iwmo:LDT_BurgerServicenummer">
+				<xs:annotation>
+					<xs:documentation>Een door de overheid toegekend identificerend nummer in het kader van het vereenvoudigen van het contact tussen overheid en burgers en het verminderen van de administratieve lasten.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Geboortedatum" type="iwmo:CDT_Geboortedatum">
+				<xs:annotation>
+					<xs:documentation>Datum waarop een natuurlijk persoon geboren is.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Geslacht" type="iwmo:LDT_Geslacht">
+				<xs:annotation>
+					<xs:documentation>De sekse van een persoon, zoals bij geboorte formeel vastgesteld of nadien formeel gewijzigd.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Naam" type="iwmo:CDT_VerkorteNaam">
+				<xs:annotation>
+					<xs:documentation>De achternaam van een natuurlijk persoon, aangeduid als Naam en Voorvoegsel.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="StatusAanlevering" type="iwmo:LDT_StatusAanlevering">
+				<xs:annotation>
+					<xs:documentation>Indicatie over de status van de informatie in de berichtklasse.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="StopProducten" type="wmo307:StopProducten"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StopProducten">
+		<xs:sequence>
+			<xs:element name="StopProduct" type="wmo307:StopProduct" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="StopProduct">
+		<xs:annotation>
+			<xs:documentation>Het mutatierecord bevat gegevens over de levering van ondersteuning.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="BeschikkingNummer" type="iwmo:LDT_Nummer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identificerend nummer van een beschikking zoals vastgesteld door de gemeente.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="ToewijzingNummer" type="iwmo:LDT_Nummer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Identificerend nummer van de opdracht om een specifiek product te leveren, zoals vastgesteld door de gemeente.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Product" type="iwmo:CDT_Product">
+				<xs:annotation>
+					<xs:documentation>Gecodeerde omschrijving van een product, dienst of resultaat ten behoeve van het leveren van ondersteuning aan een client.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="ToewijzingIngangsdatum" type="iwmo:LDT_Datum" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>De datum waarop de toegewezen product voor de eerste keer geleverd dient te worden (gelijk aan de Ingangsdatum van het toegewezen product in het Toewijzingbericht).</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Begindatum" type="iwmo:LDT_Datum">
+				<xs:annotation>
+					<xs:documentation>Datum vanaf wanneer een ondersteuningsproduct wordt geleverd.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Aanbieder" type="iwmo:LDT_AgbCode">
+				<xs:annotation>
+					<xs:documentation>Identificerende code van een Wmo aanbieder.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="RedenBeeindiging" type="iwmo:LDT_RedenBeeindiging">
+				<xs:annotation>
+					<xs:documentation>De reden van beeindiging van de Wmo-ondersteuning bij de client.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="Einddatum" type="iwmo:LDT_Datum">
+				<xs:annotation>
+					<xs:documentation>De datum waarop de Wmo-ondersteuning bij client wordt beeindigd.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+			<xs:element name="StatusAanlevering" type="iwmo:LDT_StatusAanlevering">
+				<xs:annotation>
+					<xs:documentation>Indicatie over de status van de informatie in de berichtklasse.</xs:documentation>
+				</xs:annotation>
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
+<!-- generated on 28-06-2016 -->
