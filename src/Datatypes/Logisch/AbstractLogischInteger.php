@@ -2,6 +2,7 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
+use Hyperized\Iwmo2\Datatypes\Primitief\Nummer;
 use Hyperized\Iwmo2\Generiek\Meta;
 
 /**
@@ -32,6 +33,14 @@ abstract class AbstractLogischInteger implements LogischInteger
     public function __construct(int $waarde)
     {
         $this->setWaarde($waarde);
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getWaarde()->getWaarde();
     }
 
     /**

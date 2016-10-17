@@ -12,6 +12,7 @@ interface LogischInteger
      * Enumeration constructor.
      */
     public function __construct(int $waarde);
+    public function __toString();
 
     /**
      * @return array

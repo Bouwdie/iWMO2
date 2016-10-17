@@ -12,6 +12,7 @@ interface LogischString
      * Enumeration constructor.
      */
     public function __construct(string $waarde);
+    public function __toString();
 
     /**
      * @return array

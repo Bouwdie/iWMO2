@@ -27,6 +27,14 @@ abstract class AbstractLogischString implements LogischString
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getWaarde();
+    }
+
+    /**
      * @return null
      */
     public function getWaarde()

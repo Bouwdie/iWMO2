@@ -38,6 +38,14 @@ abstract class AbstractLogischStringLengthPattern implements LogischString
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getWaarde();
+    }
+
+    /**
      * @return Tekst
      */
     public function getWaarde(): Tekst

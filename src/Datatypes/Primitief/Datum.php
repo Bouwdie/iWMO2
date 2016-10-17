@@ -37,6 +37,14 @@ class Datum
     /**
      * @return string
      */
+    public function __toString()
+    {
+        return $this->getWaarde();
+    }
+
+    /**
+     * @return string
+     */
     public function getWaarde(): string
     {
         return $this->waarde;

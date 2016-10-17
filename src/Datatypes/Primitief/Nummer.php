@@ -50,6 +50,14 @@ class Nummer
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getWaarde();
+    }
+
+    /**
      * @return int
      */
     public function getMinWaarde(): int

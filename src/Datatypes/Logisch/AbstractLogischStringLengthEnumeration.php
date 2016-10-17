@@ -36,6 +36,14 @@ abstract class AbstractLogischStringLengthEnumeration implements LogischString
     }
 
     /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getWaarde();
+    }
+
+    /**
      * @return Tekst
      */
     public function getWaarde(): Tekst
