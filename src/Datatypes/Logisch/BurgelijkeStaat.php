@@ -2,45 +2,22 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
-use Hyperized\Iwmo2\Datatypes\Primitief\Tekst;
-use Hyperized\Iwmo2\Generiek\Meta;
-
 /**
  * Class BurgelijkeStaat
  * @package Hyperized\Iwmo2\Datatypes\Logisch
  */
-class BurgelijkeStaat
+class BurgelijkeStaat extends AbstractLogischStringLengthEnumeration
 {
-    use Meta;
-
     /**
-     * @var null
+     * @var string
      */
-    private $waarde = null;
-
+    private $beschrijving = 'Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.';
     /**
-     * BurgelijkeStaat constructor.
-     * @param string $waarde
+     * @var string
      */
-    public function __construct(string $waarde)
-    {
-        $this->setWaarde($waarde);
-    }
-
+    protected $enumeration = 'COD366';
     /**
-     * @return Tekst|null
+     * @var int
      */
-    public function getWaarde(): Tekst
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param Tekst|null|string $waarde
-     */
-    public function setWaarde(string $waarde)
-    {
-        $this->waarde = new Tekst($waarde, 'COD366', 1, null);
-    }
-
+    protected $maxLength = 1;
 }

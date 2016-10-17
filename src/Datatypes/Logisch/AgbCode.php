@@ -1,50 +1,23 @@
 <?php
-namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
-use Hyperized\Iwmo2\Datatypes\Primitief\Tekst;
-use Hyperized\Iwmo2\Generiek\Meta;
+namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
 /**
  * Class AgbCode
- *    Identificerende code van een instelling.
  * @package Hyperized\Iwmo2\Datatypes\Logisch
  */
-class AgbCode
+class AgbCode extends AbstractLogischStringLengthPattern
 {
-    use Meta;
-
     /**
      * @var string
      */
     private $beschrijving = 'Identificerende code van een instelling.';
-
     /**
-     * @var null
+     * @var int
      */
-    private $waarde = null;
-
+    protected $maxLength = 8;
     /**
-     * AgbCode constructor.
-     * @param string $waarde
+     * @var string
      */
-    public function __construct(string $waarde)
-    {
-        $this->setWaarde($waarde);
-    }
-
-    /**
-     * @return Tekst|null
-     */
-    public function getWaarde(): Tekst
-    {
-        return $this->waarde;
-    }
-
-    /**
-     * @param Tekst|null|string $waarde
-     */
-    public function setWaarde(string $waarde)
-    {
-        $this->waarde = new Tekst($waarde, null, 8, '[0-9]{8}');
-    }
+    protected $pattern = '[0-9]{8}';
 }
