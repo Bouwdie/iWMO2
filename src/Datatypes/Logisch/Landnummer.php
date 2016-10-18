@@ -11,7 +11,7 @@ class Landnummer extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Het telefoonnummer van een land, vanuit Nederland benaderd.';
+    protected static $beschrijving = 'Het telefoonnummer van een land, vanuit Nederland benaderd.';
     /**
      * @var int
      */

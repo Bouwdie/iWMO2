@@ -13,7 +13,7 @@ class Straatnaam extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'De officiële door de gemeente vastgestelde naam van een straat.';
+    protected static $beschrijving = 'De officiële door de gemeente vastgestelde naam van een straat.';
     /**
      * @var int
      */

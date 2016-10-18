@@ -20,7 +20,7 @@ class Adres
     /**
      * @var string
      */
-    private $beschrijving = 'Gegevens voor de aanduiding van een adres.';
+    protected static $beschrijving = 'Gegevens voor de aanduiding van een adres.';
 
     /**
      * @var Huis|null

@@ -17,7 +17,7 @@ class Verwijzer
     /**
      * @var string
      */
-    private $beschrijving = 'Gegevens over de persoon of instantie die een cliënt heeft doorverwezen naar ondersteuning, aangeduid als Type en Naam.';
+    protected static $beschrijving = 'Gegevens over de persoon of instantie die een cliënt heeft doorverwezen naar ondersteuning, aangeduid als Type en Naam.';
     /**
      * @var TypeVerwijzer|null
      */

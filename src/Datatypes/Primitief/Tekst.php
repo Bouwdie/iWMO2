@@ -16,42 +16,42 @@ class Tekst
     /**
      * @var string
      */
-    private $beschrijving = 'Tekst';
+    protected static $beschrijving = 'Tekst';
     /**
      * @var null
      */
-    private $waarde = null;
+    protected $value = null;
     /**
      * @var int
      */
-    private $maxLength = 255;
+    protected $maxLength = 255;
     /**
      * @var null
      */
-    private $restrictions = null;
+    protected $restrictions = null;
     /**
      * @var null
      */
-    private $enumerations = null;
+    protected $enumerations = null;
     /**
      * @var null
      */
-    private $enumWaarde = null;
+    protected $enumValue = null;
     /**
      * @var null
      */
-    private $pattern = null;
+    protected $pattern = null;
 
     /**
      * Tekst constructor.
-     * @param string $waarde
-     * @param string|null $restrictions
+     * @param string $value
      * @param string|null $enumeration
      * @param int|null $maxLength
      * @param string|null $pattern
+     * @internal param null|string $restrictions
      */
     public function __construct(
-        string $waarde,
+        string $value,
         string $enumeration = null,
         int $maxLength = null,
         string $pattern = null
@@ -59,7 +59,7 @@ class Tekst
         if (!is_null($maxLength)) {
             $this->setMaxLength($maxLength);
         }
-        $this->setWaarde($waarde);
+        $this->setValue($value);
         if (!is_null($enumeration)) {
             $this->setEnumerations($enumeration);
         }
@@ -73,26 +73,26 @@ class Tekst
      */
     public function __toString()
     {
-        return $this->getWaarde();
+        return $this->getValue();
     }
 
     /**
      * @return string
      */
-    public function getWaarde(): string
+    public function getValue(): string
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param $waarde
+     * @param $value
      */
-    public function setWaarde($waarde)
+    public function setValue($value)
     {
-        if (strlen($waarde) > $this->maxLength) {
-            throw new \InvalidArgumentException('Opgegeven waarde is groter dan ' . $this->maxLength . ' in primitief datatype ' . $this->beschrijving);
+        if (strlen($value) > $this->maxLength) {
+            throw new \InvalidArgumentException('Opgegeven value is groter dan ' . $this->maxLength . ' in primitief datatype ' . $this->beschrijving);
         }
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 
     /**
@@ -139,29 +139,29 @@ class Tekst
         /** @var Enumeration $enum $enum */
         $enum = new $enumName();
 
-        if (!array_key_exists($this->getWaarde(), $enum->getWaarde())) {
-            throw new \InvalidArgumentException('Opgegeven waarde niet in ' . $enumerations . ' lijst.');
+        if (!array_key_exists($this->getValue(), $enum->getValue())) {
+            throw new \InvalidArgumentException('Opgegeven value niet in ' . $enumerations . ' lijst.');
         }
 
         $this->enumerations = $enum;
-        $this->setEnumWaarde();
+        $this->setEnumValue();
     }
 
     /**
      * @return null|string
      */
-    public function getEnumWaarde(): string
+    public function getEnumValue(): string
     {
-        return $this->enumWaarde;
+        return $this->enumValue;
     }
 
     /**
-     * @internal param null $enumWaarde
+     * @internal param null $enumValue
      */
-    public function setEnumWaarde()
+    public function setEnumValue()
     {
-        $enumWaarde = $this->enumerations->getWaarde();
-        $this->enumWaarde = $enumWaarde[$this->waarde];
+        $enumValue = $this->enumerations->getValue();
+        $this->enumValue = $enumValue[$this->value];
     }
 
     /**
@@ -177,9 +177,9 @@ class Tekst
      */
     public function setPattern(string $pattern)
     {
-        preg_match('/'.$pattern.'/', $this->waarde, $matches);
-        if(!in_array($this->waarde, $matches)) {
-            throw new \InvalidArgumentException('Opgegeven waarde past niet in patroon: '.$pattern.'.');
+        preg_match('/'.$pattern.'/', $this->value, $matches);
+        if(!in_array($this->value, $matches)) {
+            throw new \InvalidArgumentException('Opgegeven value past niet in patroon: '.$pattern.'.');
         }
         $this->pattern = $pattern;
     }

@@ -4,23 +4,28 @@ namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
 /**
  * Interface Logisch
- * @package Hyperized\Iwmo2\Logisch
+ * @package Hyperized\Iwmo2\Datatypes\Logisch
  */
 interface Logisch
 {
     /**
      * Enumeration constructor.
+     * @param $value
      */
-    public function __construct();
+    public function __construct($value);
+
+    /**
+     * @return mixed
+     */
     public function __toString();
 
     /**
      * @return array
      */
-    public function getWaarde();
+    public function getValue();
 
     /**
-     * @param $waarde
+     * @param $value
      */
-    public function setWaarde($waarde);
+    public function setValue($value);
 }

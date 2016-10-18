@@ -11,7 +11,7 @@ class BurgelijkeStaat extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.';
+    protected static $beschrijving = 'Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.';
     /**
      * @var string
      */

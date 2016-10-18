@@ -12,7 +12,7 @@ class Volume extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de mate van ondersteuning betreffende een product, onderdeel van de Omvang.';
+    protected static $beschrijving = 'Aanduiding van de mate van ondersteuning betreffende een product, onderdeel van de Omvang.';
 
     /**
      * @var int

@@ -11,11 +11,11 @@ class WJ001 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "RETOURCODE";
+    protected $titel = "RETOURCODE";
     /**
      * @var string
      */
-    private $beschrijving = "Melding in een retourbericht. Het betreft een code die in een retourbericht het resultaat van de beoordeling van een (deel van een) ontvangen bericht weergeeft.";
+    protected static $beschrijving = "Melding in een retourbericht. Het betreft een code die in een retourbericht het resultaat van de beoordeling van een (deel van een) ontvangen bericht weergeeft.";
 
     /**
      * Retourcode
@@ -152,7 +152,7 @@ class WJ001 extends AbstractEnumeration
         '1079' => "BEPERKING ontbreekt of is onjuist.",
         '1081' => "DUUR ontbreekt of is onjuist.",
         '1092' => "VOLGORDE ontbreekt of is onjuist.",
-        '1110' => "Waarde gemeentecode moet gelijk zijn aan waarde gemeentecode voorlooprecord.",
+        '1110' => "Value gemeentecode moet gelijk zijn aan value gemeentecode voorlooprecord.",
         '1112' => "PRODUCTCATEGORIE ontbreekt of is onjuist.",
         '1113' => "Productcategorie / functiecode / zorgzwaartepakketcode ontbreekt of is onjuist.",
         '1115' => "GRONDSLAG (01) ontbreekt of is onjuist.",
@@ -206,7 +206,7 @@ class WJ001 extends AbstractEnumeration
         '1414' => "OVERBELASTING (M) ontbreekt of is onjuist.",
         '1415' => "NaamVerwijzer ontbreekt of is onjuist.",
         '1416' => "Frequentie ontbreekt of is onjuist",
-        '2293' => "De waarde van rubriek 0105 Soort bericht moet voldoen aan de omgeving van VECOZO (productie of test).",
+        '2293' => "De value van rubriek 0105 Soort bericht moet voldoen aan de omgeving van VECOZO (productie of test).",
         '4702' => "INGANGSDATUM indicatiebesluit ontbreekt of is onjuist.",
         '4703' => "EINDDATUM indicatiebesluit ontbreekt of is onjuist.",
         '4761' => "AFGIFTEDATUM ontbreekt of is onjuist.",
@@ -267,7 +267,7 @@ class WJ001 extends AbstractEnumeration
         '8187' => "De prestatie hoort niet bij deze verzekerde.",
         '8188' => "Einddatum product moet groter zijn dan of gelijk zijn aan begindatum product.",
         '8193' => "Referentienummer voorgaande gerelateerd prestatierecord moet gevuld zijn in geval van creditregel.",
-        '8194' => "Indicatie debet/credit moet de waarde D hebben indien het totaal declaratie-/factuurbedrag niet gevuld is.",
+        '8194' => "Indicatie debet/credit moet de value D hebben indien het totaal declaratie-/factuurbedrag niet gevuld is.",
         '8198' => "Het bestand kan niet worden doorgestuurd. De gemeente is niet aangesloten op het elektronisch declaratieportaal van VECOZO.",
         '8199' => "Voorlooprecord komt ten onrechte meerdere keren voor.",
         '8200' => "Sluitrecord komt ten onrechte meerdere keren voor.",
@@ -275,7 +275,7 @@ class WJ001 extends AbstractEnumeration
         '8202' => "Patiënt(identificatie)nummer is onjuist.",
         '8206' => "BTW-identificatienummer ontbreekt of is onjuist.",
         '8207' => "Referentienummer dit prestatierecord moet uniek zijn binnen het bestand.",
-        '8215' => "Waarde Berekend bedrag is ongelijk aan waarde Aantal uitgevoerde producten maal Tarief product (incl. BTW).",
+        '8215' => "Value Berekend bedrag is ongelijk aan value Aantal uitgevoerde producten maal Tarief product (incl. BTW).",
         '8220' => "Maximum aantal prestaties is overschreden.",
         '8222' => "Begindatum product ligt voor toegestane datum.",
         '8223' => "Naam verzekerde (02) mag niet gevuld zijn indien naamcode/naamgebruik (02) gelijk is aan 0.",
@@ -335,8 +335,8 @@ class WJ001 extends AbstractEnumeration
         '8452' => "Retourcode (02) ontbreekt of is onjuist.",
         '8453' => "Retourcode (03) ontbreekt of is onjuist.",
         '8454' => "Dagtekening retourbericht moet groter zijn dan of gelijk zijn aan factuurdatum.",
-        '8455' => "Indicatie debet/credit moet de waarde D hebben, indien het totaal ingediend declaratie-/factuurbedrag niet gevuld is.",
-        '8456' => "Indicatie debet/credit moet de waarde D hebben indien het totaal toegekend bedrag niet gevuld is.",
+        '8455' => "Indicatie debet/credit moet de value D hebben, indien het totaal ingediend declaratie-/factuurbedrag niet gevuld is.",
+        '8456' => "Indicatie debet/credit moet de value D hebben indien het totaal toegekend bedrag niet gevuld is.",
         '8597' => "Aantal tariefrecords retour ontbreekt of is onjuist.",
         '8611' => "Einddatum deelprestatie moet gelijk zijn aan of kleiner zijn dan einddatum prestatie.",
         '8616' => "Verwijsdatum ontbreekt of is onjuist",
@@ -387,7 +387,7 @@ class WJ001 extends AbstractEnumeration
         '8681' => "Een van beide, aantal tijdseenheden direct of indirect, moet gevuld zijn.",
         '8682' => "Referentienummer dit tijdsbestedingrecord moet uniek zijn binnen het bestand.",
         '8683' => "Referentienummer voorgaande gerelateerd tijdsbestedingrecord moet gevuld zijn in geval van creditregel.",
-        '8795' => "Zorgvraagzwaarte is met ongeldige waarde gevuld.",
+        '8795' => "Zorgvraagzwaarte is met ongeldige value gevuld.",
         '8812' => "Code Wmo-aanbieder moet gevuld zijn als Identificatiebetaling aan gelijk is aan 2.",
         '8815' => "Aantal tijdsbestedingrecords retour ontbreekt of is onjuist.",
         '8816' => "Einddatum declaratie-/factuurperiode valt na factuurdatum.",
@@ -404,7 +404,7 @@ class WJ001 extends AbstractEnumeration
         '8836' => "BTW-bedrag moet gevuld zijn met nullen.",
         '8837' => "BTW-bedrag moet gevuld zijn.",
         '8838' => "Totaal aantal detailrecords is groter dan maximum.",
-        '8839' => "Indicatie debet/credit moet de waarde D of spatie hebben indien het totaal BTW-bedrag met \"nullen\" gevuld is.",
+        '8839' => "Indicatie debet/credit moet de value D of spatie hebben indien het totaal BTW-bedrag met \"nullen\" gevuld is.",
         '8847' => "Begindatum declaratie-/factuurperiode moet kleiner zijn dan of gelijk zijn aan systeemdatum VECOZO.",
         '8848' => "Dagtekening factuur moet kleiner zijn dan of gelijk zijn aan systeemdatum VECOZO.",
         '8849' => "Dagtekening retourbericht moet kleiner zijn dan of gelijk zijn aan systeemdatum VECOZO.",

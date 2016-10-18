@@ -11,11 +11,11 @@ class COD736 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "GRONDSLAG ZORG";
+    protected $titel = "GRONDSLAG ZORG";
     /**
      * @var string
      */
-    private $beschrijving = "Codering die aangeeft wat ten grondslag ligt aan de zorg.";
+    protected static $beschrijving = "Codering die aangeeft wat ten grondslag ligt aan de zorg.";
 
     /**
      * Grondslag zorg

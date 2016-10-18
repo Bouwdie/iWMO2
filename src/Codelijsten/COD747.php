@@ -11,11 +11,11 @@ class COD747 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "COMMUNICATIEVORM";
+    protected $titel = "COMMUNICATIEVORM";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van de bijzondere vorm van communicatie die gebruikt dient te worden.";
+    protected static $beschrijving = "Gecodeerde aanduiding van de bijzondere vorm van communicatie die gebruikt dient te worden.";
 
     /**
      * Communicatievorm

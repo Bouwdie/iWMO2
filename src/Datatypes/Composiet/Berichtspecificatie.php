@@ -18,7 +18,7 @@ class Berichtspecificatie
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van het soort bericht, uitgedrukt in een berichtcode, versienummer en subversienummer.';
+    protected static $beschrijving = 'Aanduiding van het soort bericht, uitgedrukt in een berichtcode, versienummer en subversienummer.';
 
     /**
      * @var BerichtCode|null

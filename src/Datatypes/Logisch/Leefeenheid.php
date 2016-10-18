@@ -11,7 +11,7 @@ class Leefeenheid extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde aanduiding van de leefsituatie van een cliënt.';
+    protected static $beschrijving = 'Gecodeerde aanduiding van de leefsituatie van een cliënt.';
     /**
      * @var int
      */

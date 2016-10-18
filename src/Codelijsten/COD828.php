@@ -11,11 +11,11 @@ class COD828 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "SCORE VRAAG BEPERKING";
+    protected $titel = "SCORE VRAAG BEPERKING";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van de score op een vraag over een beperking.";
+    protected static $beschrijving = "Gecodeerde aanduiding van de score op een vraag over een beperking.";
 
     /**
      * Score vraag beperking

@@ -2,6 +2,8 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
+use Hyperized\Iwmo2\Datatypes\Primitief\Datum as PrimitiefDatum;
+
 /**
  * Class Datum
  * @package Hyperized\Iwmo2\Datatypes\Logisch
@@ -11,21 +13,21 @@ class Datum extends AbstractLogischString
     /**
      * @var string
      */
-    private $beschrijving = "Datum";
+    protected static $beschrijving = "Datum";
 
     /**
-     * @return \Hyperized\Iwmo2\Datatypes\Primitief\Tijd
+     * @return PrimitiefDatum
      */
-    public function getWaarde(): \Hyperized\Iwmo2\Datatypes\Primitief\Datum
+    public function getValue(): PrimitiefDatum
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        $this->waarde = new \Hyperized\Iwmo2\Datatypes\Primitief\Datum($waarde);
+        $this->value = new PrimitiefDatum($value);
     }
 }

@@ -10,17 +10,18 @@ interface LogischString
 {
     /**
      * Enumeration constructor.
+     * @param string $value
      */
-    public function __construct(string $waarde);
+    public function __construct(string $value);
     public function __toString();
 
     /**
      * @return array
      */
-    public function getWaarde();
+    public function getValue();
 
     /**
-     * @param $waarde
+     * @param $value
      */
-    public function setWaarde(string $waarde);
+    public function setValue(string $value);
 }

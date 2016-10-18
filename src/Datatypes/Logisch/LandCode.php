@@ -11,7 +11,7 @@ class LandCode extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Identificatie van een (historisch/actueel) land of gebiedsdeel.';
+    protected static $beschrijving = 'Identificatie van een (historisch/actueel) land of gebiedsdeel.';
     /**
      * @var string
      */

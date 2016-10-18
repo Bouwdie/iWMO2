@@ -11,7 +11,7 @@ class Huisletter extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend.";
+    protected static $beschrijving = "Een alfabetisch teken achter het huisnummer zoals dit door het gemeentebestuur is toegekend.";
     /**
      * @var int
      */

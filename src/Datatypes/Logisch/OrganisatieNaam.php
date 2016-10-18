@@ -11,7 +11,7 @@ class OrganisatieNaam extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'De naam van een organisatie waar de cliënt of relatie cliënt verblijft.';
+    protected static $beschrijving = 'De naam van een organisatie waar de cliënt of relatie cliënt verblijft.';
     /**
      * @var int
      */

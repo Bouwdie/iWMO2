@@ -11,7 +11,7 @@ class HuisnummerToevoeging extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = "Die letters of tekens die noodzakelijk zijn om, naast huisnummer en -letter, de brievenbus te vinden.";
+    protected static $beschrijving = "Die letters of tekens die noodzakelijk zijn om, naast huisnummer en -letter, de brievenbus te vinden.";
     /**
      * @var int
      */

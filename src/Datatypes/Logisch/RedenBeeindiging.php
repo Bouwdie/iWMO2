@@ -11,7 +11,7 @@ class RedenBeeindiging extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'De reden van een mutatie/beëindiging van de Wmo-ondersteuning bij cliënt.';
+    protected static $beschrijving = 'De reden van een mutatie/beëindiging van de Wmo-ondersteuning bij cliënt.';
     /**
      * @var string
      */

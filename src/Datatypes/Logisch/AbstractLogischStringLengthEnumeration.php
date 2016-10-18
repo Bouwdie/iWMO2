@@ -16,7 +16,7 @@ abstract class AbstractLogischStringLengthEnumeration implements LogischString
     /**
      * @var null
      */
-    protected $waarde = null;
+    protected $value = null;
     /**
      * @var null
      */
@@ -28,11 +28,11 @@ abstract class AbstractLogischStringLengthEnumeration implements LogischString
 
     /**
      * AbstractLogischStringLengthEnumeration constructor.
-     * @param string $waarde
+     * @param string $value
      */
-    public function __construct(string $waarde)
+    public function __construct(string $value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -40,22 +40,22 @@ abstract class AbstractLogischStringLengthEnumeration implements LogischString
      */
     public function __toString()
     {
-        return (string) $this->getWaarde();
+        return (string) $this->getValue();
     }
 
     /**
      * @return Tekst
      */
-    public function getWaarde(): Tekst
+    public function getValue(): Tekst
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        $this->waarde = new Tekst($waarde, $this->enumeration, $this->maxLength, null);
+        $this->value = new Tekst($value, $this->enumeration, $this->maxLength, null);
     }
 }

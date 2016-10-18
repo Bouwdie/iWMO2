@@ -11,7 +11,7 @@ class CizCode extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Identificatie van het indicatieorgaan dat de indicatiestelling heeft verricht.';
+    protected static $beschrijving = 'Identificatie van het indicatieorgaan dat de indicatiestelling heeft verricht.';
     /**
      * @var int
      */

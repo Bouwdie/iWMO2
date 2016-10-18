@@ -11,11 +11,11 @@ class COD749 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "DUUR";
+    protected $titel = "DUUR";
     /**
      * @var string
      */
-    private $beschrijving = "Code die aangeeft wat de verwachte duur is van de categorie beperking.";
+    protected static $beschrijving = "Code die aangeeft wat de verwachte duur is van de categorie beperking.";
 
     /**
      * Duur

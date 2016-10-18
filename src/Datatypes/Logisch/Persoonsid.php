@@ -11,7 +11,7 @@ class Persoonsid extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Indentificerend nummer van een natuurlijk persoon.';
+    protected static $beschrijving = 'Indentificerend nummer van een natuurlijk persoon.';
     /**
      * @var int
      */

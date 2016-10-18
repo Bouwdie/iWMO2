@@ -11,7 +11,7 @@ class Geslacht extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'De sekse van een persoon, zoals bij geboorte formeel vastgesteld of nadien formeel gewijzigd.';
+    protected static $beschrijving = 'De sekse van een persoon, zoals bij geboorte formeel vastgesteld of nadien formeel gewijzigd.';
     /**
      * @var string
      */

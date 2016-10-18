@@ -11,7 +11,7 @@ class AgbCode extends AbstractLogischStringLengthPattern
     /**
      * @var string
      */
-    private $beschrijving = 'Identificerende code van een instelling.';
+    protected static $beschrijving = 'Identificerende code van een instelling.';
     /**
      * @var int
      */

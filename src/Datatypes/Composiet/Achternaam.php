@@ -17,7 +17,7 @@ class Achternaam
     /**
      * @var string
      */
-    private $beschrijving = 'De achternaam van een natuurlijk persoon, aangeduid als Naam met Voorvoegsel en een NaamCode die het naamgebruik aangeeft.';
+    protected static $beschrijving = 'De achternaam van een natuurlijk persoon, aangeduid als Naam met Voorvoegsel en een NaamCode die het naamgebruik aangeeft.';
 
     /**
      * @var Naam|null
@@ -57,8 +57,8 @@ class Achternaam
     public function __toString()
     {
         if(!is_null($this->voorvoegsel)) {
-            return $this->voorvoegsel->getWaarde()->getWaarde().' '.$this->naam->getWaarde()->getWaarde();
+            return $this->voorvoegsel->getValue()->getValue().' '.$this->naam->getValue()->getValue();
         }
-        return $this->naam->getWaarde()->getWaarde();
+        return $this->naam->getValue()->getValue();
     }
 }

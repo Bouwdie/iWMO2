@@ -11,7 +11,7 @@ class BerichtSubversie extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Volgnummer binnen het versienummer van een (externe-integratie) berichtstandaard. Volgnummer van de formele uitgifte van een subversie van een (Externe Integratie) berichtstandaard.';
+    protected static $beschrijving = 'Volgnummer binnen het versienummer van een (externe-integratie) berichtstandaard. Volgnummer van de formele uitgifte van een subversie van een (Externe Integratie) berichtstandaard.';
     /**
      * @var int
      */

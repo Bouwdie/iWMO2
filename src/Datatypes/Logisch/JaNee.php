@@ -11,7 +11,7 @@ class JaNee extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Codering voor ja of nee.';
+    protected static $beschrijving = 'Codering voor ja of nee.';
     /**
      * @var string
      */

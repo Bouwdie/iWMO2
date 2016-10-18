@@ -11,11 +11,11 @@ class WMO588 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "REDENBEEINDIGING";
+    protected $titel = "REDENBEEINDIGING";
     /**
      * @var string
      */
-    private $beschrijving = "De reden van beëindiging van de Wmo-ondersteuning bij een cliënt.";
+    protected static $beschrijving = "De reden van beëindiging van de Wmo-ondersteuning bij een cliënt.";
 
     /**
      * Reden beeindiging

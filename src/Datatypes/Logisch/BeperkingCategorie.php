@@ -11,7 +11,7 @@ class BeperkingCategorie extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'anduiding over de categorie van de beperking.';
+    protected static $beschrijving = 'anduiding over de categorie van de beperking.';
     /**
      * @var string
      */

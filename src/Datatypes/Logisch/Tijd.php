@@ -2,6 +2,8 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Logisch;
 
+use Hyperized\Iwmo2\Datatypes\Primitief\Tijd as PrimitiefTijd;
+
 /**
  * Class Tijd
  * @package Hyperized\Iwmo2\Datatypes\Logisch
@@ -11,21 +13,21 @@ class Tijd extends AbstractLogischString
     /**
      * @var string
      */
-    private $beschrijving = "Tijd";
+    protected static $beschrijving = "Tijd";
 
     /**
      * @return \Hyperized\Iwmo2\Datatypes\Primitief\Tijd
      */
-    public function getWaarde(): \Hyperized\Iwmo2\Datatypes\Primitief\Tijd
+    public function getValue(): PrimitiefTijd
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        $this->waarde = new \Hyperized\Iwmo2\Datatypes\Primitief\Tijd($waarde);
+        $this->value = new PrimitiefTijd($value);
     }
 }

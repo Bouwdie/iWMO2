@@ -11,7 +11,7 @@ class BerichtCode extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Code ter identificatie van een soort bericht.';
+    protected static $beschrijving = 'Code ter identificatie van een soort bericht.';
     /**
      * @var string
      */

@@ -18,7 +18,7 @@ class Commentaar
     /**
      * @var string
      */
-    private $beschrijving = 'Vrije tekst (bijvoorbeeld toelichting) in een bericht.';
+    protected static $beschrijving = 'Vrije tekst (bijvoorbeeld toelichting) in een bericht.';
     /**
      * @var Regelnummer|null
      */

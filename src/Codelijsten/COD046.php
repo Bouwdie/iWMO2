@@ -11,11 +11,11 @@ class COD046 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "GESLACHT";
+    protected $titel = "GESLACHT";
     /**
      * @var string
      */
-    private $beschrijving = "Unieke aanduiding van de sexe van een persoon, het niet bekend zijn daarvan, het ontbreken of het niet gespecificeerd zijn.";
+    protected static $beschrijving = "Unieke aanduiding van de sexe van een persoon, het niet bekend zijn daarvan, het ontbreken of het niet gespecificeerd zijn.";
 
     /**
      * Geslacht

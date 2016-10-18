@@ -15,15 +15,15 @@ abstract class AbstractLogischString implements LogischString
     /**
      * @var null
      */
-    protected $waarde = null;
+    protected $value = null;
 
     /**
      * AbstractLogischString constructor.
-     * @param string $waarde
+     * @param string $value
      */
-    public function __construct(string $waarde)
+    public function __construct(string $value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -31,22 +31,22 @@ abstract class AbstractLogischString implements LogischString
      */
     public function __toString()
     {
-        return $this->getWaarde();
+        return $this->getValue();
     }
 
     /**
      * @return null
      */
-    public function getWaarde()
+    public function getValue()
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 }

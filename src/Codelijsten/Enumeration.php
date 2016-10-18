@@ -16,10 +16,10 @@ interface Enumeration
     /**
      * @return array
      */
-    public function getWaarde(): array;
+    public function getValue(): array;
 
     /**
-     * @param array $waarde
+     * @param array $value
      */
-    public function setWaarde(array $waarde);
+    public function setValue(array $value);
 }

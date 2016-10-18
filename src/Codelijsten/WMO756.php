@@ -11,11 +11,11 @@ class WMO756 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "EENHEID";
+    protected $titel = "EENHEID";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van de mate van zorg betreffende een product, uitgedrukt in een eenheid.";
+    protected static $beschrijving = "Gecodeerde aanduiding van de mate van zorg betreffende een product, uitgedrukt in een eenheid.";
 
     /**
      * Eenheid

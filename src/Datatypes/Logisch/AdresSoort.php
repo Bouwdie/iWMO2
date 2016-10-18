@@ -11,7 +11,7 @@ class AdresSoort extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Nadere typering van het adres.';
+    protected static $beschrijving = 'Nadere typering van het adres.';
     /**
      * @var string
      */

@@ -16,7 +16,7 @@ class VerkorteNaam
     /**
      * @var string
      */
-    private $beschrijving = 'De achternaam van een natuurlijk persoon, aangeduid als Naam en Voorvoegsel.';
+    protected static $beschrijving = 'De achternaam van een natuurlijk persoon, aangeduid als Naam en Voorvoegsel.';
     /**
      * @var \Hyperized\Iwmo2\Datatypes\Composiet\Achternaam|null
      */

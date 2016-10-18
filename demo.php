@@ -8,7 +8,7 @@ use Hyperized\Iwmo2\Datatypes\Primitief\Nummer;
 use Hyperized\Iwmo2\Datatypes\Primitief\Tekst;
 use Hyperized\Iwmo2\Datatypes\Primitief\Tijd;
 
-require('./src/autoload.php');
+require('autoload.php');
 
 // Primitieve datatypes
 print_r(new Datum('2016-02-18'));

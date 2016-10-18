@@ -11,7 +11,7 @@ class RedenIntrekking extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'De reden waarom een toewijzing wordt ingetrokken.';
+    protected static $beschrijving = 'De reden waarom een toewijzing wordt ingetrokken.';
     /**
      * @var int
      */

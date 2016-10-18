@@ -11,11 +11,11 @@ class COD232 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "JURIDISCHE STATUS";
+    protected $titel = "JURIDISCHE STATUS";
     /**
      * @var string
      */
-    private $beschrijving = "Juridische situatie die voor de cliënt van toepassing is op het moment van indicatiestelling.";
+    protected static $beschrijving = "Juridische situatie die voor de cliënt van toepassing is op het moment van indicatiestelling.";
 
     /**
      * Juridische status
@@ -23,7 +23,7 @@ class COD232 extends AbstractEnumeration
     const code = [
         '01' => "Rechterlijke machtiging (rm) voorlopig / voortgezette machtiging",
         '02' => "RM op eigen verzoek",
-        '03' => "RM met voorwaardelijk ontslag",
+        '03' => "RM met voorvaluelijk ontslag",
         '04' => "Onder toezichtstelling (ots)",
         '05' => "In bewaring stelling (ibs)",
         '06' => "Voogdij",

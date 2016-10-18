@@ -11,7 +11,7 @@ class Postcode extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de (inter)nationale postcode. Dit veld is geschikt voor zowel de Nederlandse als niet-Nederlandse postcodes.';
+    protected static $beschrijving = 'Aanduiding van de (inter)nationale postcode. Dit veld is geschikt voor zowel de Nederlandse als niet-Nederlandse postcodes.';
     /**
      * @var int
      */

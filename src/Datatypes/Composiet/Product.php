@@ -17,7 +17,7 @@ class Product
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde omschrijving van een product, dienst of resultaat ten behoeve van het leveren van ondersteuning aan een cliënt.';
+    protected static $beschrijving = 'Gecodeerde omschrijving van een product, dienst of resultaat ten behoeve van het leveren van ondersteuning aan een cliënt.';
     /**
      * @var ProductCategorie|null
      */

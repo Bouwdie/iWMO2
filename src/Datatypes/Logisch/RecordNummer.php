@@ -11,7 +11,7 @@ class RecordNummer extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Unieke codering van een detailrecord.';
+    protected static $beschrijving = 'Unieke codering van een detailrecord.';
     /**
      * @var int
      */

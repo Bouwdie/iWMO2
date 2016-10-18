@@ -11,7 +11,7 @@ class RecordAantal extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Het aantal detailrecords van een bepaald type in een bestand.';
+    protected static $beschrijving = 'Het aantal detailrecords van een bepaald type in een bestand.';
 
     /**
      * @var int

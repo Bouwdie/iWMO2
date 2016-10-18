@@ -17,7 +17,7 @@ class Telefoon
     /**
      * @var string
      */
-    private $beschrijving = 'Het telefoonnummer waarop de cliënt of relatie van de cliënt te bereiken is.';
+    protected static $beschrijving = 'Het telefoonnummer waarop de cliënt of relatie van de cliënt te bereiken is.';
     /**
      * @var Telefoonnummer|null
      */

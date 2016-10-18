@@ -11,11 +11,11 @@ class COD002 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "BERICHT";
+    protected $titel = "BERICHT";
     /**
      * @var string
      */
-    private $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
+    protected static $beschrijving = "Code ter identificatie van een (soort) (externe-integratie)bericht.";
 
     /**
      * Bericht

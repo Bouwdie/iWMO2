@@ -11,11 +11,11 @@ class COD700 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "NAAMCODE";
+    protected $titel = "NAAMCODE";
     /**
      * @var string
      */
-    private $beschrijving = "Aanduiding naamgebruik (gecodeerd).";
+    protected static $beschrijving = "Aanduiding naamgebruik (gecodeerd).";
 
     /**
      * Naamcode

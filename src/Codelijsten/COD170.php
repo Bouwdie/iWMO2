@@ -11,11 +11,11 @@ class COD170 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "DATUMGEBRUIK";
+    protected $titel = "DATUMGEBRUIK";
     /**
      * @var string
      */
-    private $beschrijving = "Aanduiding van (het gedeelte van) een geboortedatum dat bekend is.";
+    protected static $beschrijving = "Aanduiding van (het gedeelte van) een geboortedatum dat bekend is.";
 
     /**
      * Datumgebruik

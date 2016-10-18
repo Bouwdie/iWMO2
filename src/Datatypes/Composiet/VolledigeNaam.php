@@ -17,7 +17,7 @@ class VolledigeNaam
     /**
      * @var string
      */
-    private $beschrijving = 'Volledige naam van een natuurlijk persoon, aangeduid als Voorletters, Geslachtsnaam en Partnernaam en een NaamCode die het naamgebruik aangeeft.';
+    protected static $beschrijving = 'Volledige naam van een natuurlijk persoon, aangeduid als Voorletters, Geslachtsnaam en Partnernaam en een NaamCode die het naamgebruik aangeeft.';
 
     /**
      * @var Achternaam|null

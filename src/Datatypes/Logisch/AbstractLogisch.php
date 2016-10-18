@@ -15,14 +15,15 @@ abstract class AbstractLogisch implements Logisch
     /**
      * @var null
      */
-    protected $waarde = null;
+    protected $value = null;
 
     /**
      * AbstractLogisch constructor.
+     * @param $value
      */
-    public function __construct()
+    public function __construct($value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -30,22 +31,22 @@ abstract class AbstractLogisch implements Logisch
      */
     public function __toString()
     {
-        return $this->getWaarde();
+        return $this->getValue();
     }
 
     /**
      * @return null
      */
-    public function getWaarde()
+    public function getValue()
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param $waarde
+     * @param $value
      */
-    public function setWaarde($waarde)
+    public function setValue($value)
     {
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 }

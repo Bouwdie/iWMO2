@@ -16,7 +16,7 @@ abstract class AbstractLogischStringLengthPattern implements LogischString
     /**
      * @var null
      */
-    protected $waarde = null;
+    protected $value = null;
 
     /**
      * @var null
@@ -30,11 +30,11 @@ abstract class AbstractLogischStringLengthPattern implements LogischString
 
     /**
      * AbstractLogischStringLength constructor.
-     * @param string $waarde
+     * @param string $value
      */
-    public function __construct(string $waarde)
+    public function __construct(string $value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -42,22 +42,22 @@ abstract class AbstractLogischStringLengthPattern implements LogischString
      */
     public function __toString()
     {
-        return $this->getWaarde();
+        return $this->getValue();
     }
 
     /**
      * @return Tekst
      */
-    public function getWaarde(): Tekst
+    public function getValue(): Tekst
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        $this->waarde = new Tekst($waarde, null, $this->maxLength, $this->pattern);
+        $this->value = new Tekst($value, null, $this->maxLength, $this->pattern);
     }
 }

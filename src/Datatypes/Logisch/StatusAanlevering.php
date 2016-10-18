@@ -11,7 +11,7 @@ class StatusAanlevering extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Indicatie over de status van de informatie in het record.';
+    protected static $beschrijving = 'Indicatie over de status van de informatie in het record.';
     /**
      * @var int
      */

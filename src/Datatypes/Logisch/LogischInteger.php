@@ -10,17 +10,22 @@ interface LogischInteger
 {
     /**
      * Enumeration constructor.
+     * @param int $value
      */
-    public function __construct(int $waarde);
+    public function __construct(int $value);
+
+    /**
+     * @return mixed
+     */
     public function __toString();
 
     /**
      * @return array
      */
-    public function getWaarde();
+    public function getValue();
 
     /**
-     * @param $waarde
+     * @param $value
      */
-    public function setWaarde(int $waarde);
+    public function setValue(int $value);
 }

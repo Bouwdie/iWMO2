@@ -16,7 +16,7 @@ class Periode
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van een tijdsperiode met een Begindatum en/of een Einddatum.';
+    protected static $beschrijving = 'Aanduiding van een tijdsperiode met een Begindatum en/of een Einddatum.';
     /**
      * @var Datum|null
      * Optional

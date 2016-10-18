@@ -12,7 +12,7 @@ class Eenheid extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de eenheid waarin de Omvang van een ondersteuningsproduct is beschreven.';
+    protected static $beschrijving = 'Aanduiding van de eenheid waarin de Omvang van een ondersteuningsproduct is beschreven.';
     /**
      * @var string
      */

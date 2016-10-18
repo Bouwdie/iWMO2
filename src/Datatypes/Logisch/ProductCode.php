@@ -11,7 +11,7 @@ class ProductCode extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde aanduiding van producten in het kader van de Wet maatschappelijke ondersteuning (Wmo).';
+    protected static $beschrijving = 'Gecodeerde aanduiding van producten in het kader van de Wet maatschappelijke ondersteuning (Wmo).';
     /**
      * @var int
      */

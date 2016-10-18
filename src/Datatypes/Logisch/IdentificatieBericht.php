@@ -11,7 +11,7 @@ class IdentificatieBericht extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Naam of nummer, die ter identificatie aan een totale aanlevering kan worden meegegeven.';
+    protected static $beschrijving = 'Naam of nummer, die ter identificatie aan een totale aanlevering kan worden meegegeven.';
     /**
      * @var int
      */

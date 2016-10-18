@@ -27,7 +27,7 @@ trait Meta
      */
     public function getBeschrijving()
     {
-        return $this->beschrijving;
+        return static::$beschrijving;
     }
 
     /**

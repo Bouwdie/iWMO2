@@ -11,11 +11,11 @@ class COD825 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "VRAAG BEPERKING";
+    protected $titel = "VRAAG BEPERKING";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van de vraag over beperking.";
+    protected static $beschrijving = "Gecodeerde aanduiding van de vraag over beperking.";
 
     /**
      * Vraag beperking
@@ -38,7 +38,7 @@ class COD825 extends AbstractEnumeration
         '0201' => "Mobiliteit - Lichaamspositie veranderen (opstaan uit stoel, knielen en opstaan)",
         '0202' => "Mobiliteit - Lichaamspositie handhaven (rechtop staan; in stoel zitten)",
         '0203' => "Mobiliteit - Lichtere voorwerpen tillen en dragen (bijv. kopje oppakken)",
-        '0204' => "Mobiliteit - Zwaardere voorwerpen tillen en dragen (bijv. kind in bed leggen)",
+        '0204' => "Mobiliteit - Zvaluere voorwerpen tillen en dragen (bijv. kind in bed leggen)",
         '0205' => "Mobiliteit - Gecoördinerede bewegingen met benen/voeten maken (bijv. fietsen)",
         '0206' => "Mobiliteit - Fijne handbewegingen maken (bijv. geld tellen, toetsen indrukken)",
         '0207' => "Mobiliteit - Grove hand- en armbewegingen maken (duwen, trekken, vangen)",

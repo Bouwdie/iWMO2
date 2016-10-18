@@ -11,11 +11,11 @@ class COD327 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "CODE VERWIJZER";
+    protected $titel = "CODE VERWIJZER";
     /**
      * @var string
      */
-    private $beschrijving = "Aanduiding van de aard van de (zelf)verwijzer.";
+    protected static $beschrijving = "Aanduiding van de aard van de (zelf)verwijzer.";
 
     /**
      * Code verwijzer

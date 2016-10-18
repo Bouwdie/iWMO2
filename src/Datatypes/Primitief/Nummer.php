@@ -15,38 +15,38 @@ class Nummer
     /**
      * @var string
      */
-    private $beschrijving = 'Nummer';
+    protected static $beschrijving = 'Nummer';
     /**
      * @var null
      */
-    private $waarde = null;
+    private $value;
     /**
      * @var int
      */
-    private $maxWaarde = PHP_INT_MAX;
+    private $maxValue = PHP_INT_MAX;
     /**
      * @var int
      */
-    private $minWaarde = PHP_INT_MIN;
+    private $minValue = PHP_INT_MIN;
 
     /**
      * Nummer constructor.
-     * @param int $waarde
-     * @param int|null $maxWaarde
-     * @param int|null $minWaarde
+     * @param int $value
+     * @param int|null $maxValue
+     * @param int|null $minValue
      */
     public function __construct(
-        int $waarde,
-        int $maxWaarde = null,
-        int $minWaarde = null
+        int $value,
+        int $maxValue = null,
+        int $minValue = null
     ) {
-        if (!is_null($maxWaarde)) {
-            $this->setMaxWaarde($maxWaarde);
+        if (!is_null($maxValue)) {
+            $this->setMaxValue($maxValue);
         }
-        if (!is_null($minWaarde)) {
-            $this->setMinWaarde($minWaarde);
+        if (!is_null($minValue)) {
+            $this->setMinValue($minValue);
         }
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -54,60 +54,60 @@ class Nummer
      */
     public function __toString()
     {
-        return (string) $this->getWaarde();
+        return (string) $this->getValue();
     }
 
     /**
      * @return int
      */
-    public function getMinWaarde(): int
+    public function getMinValue(): int
     {
-        return $this->minWaarde;
+        return $this->minValue;
     }
 
     /**
-     * @param int $minWaarde
+     * @param int $minValue
      */
-    public function setMinWaarde(int $minWaarde)
+    public function setMinValue(int $minValue)
     {
-        $this->minWaarde = $minWaarde;
-    }
-
-    /**
-     * @return int
-     */
-    public function getMaxWaarde(): int
-    {
-        return $this->maxWaarde;
-    }
-
-    /**
-     * @param int $maxWaarde
-     */
-    public function setMaxWaarde(int $maxWaarde)
-    {
-        $this->maxWaarde = $maxWaarde;
+        $this->minValue = $minValue;
     }
 
     /**
      * @return int
      */
-    public function getWaarde(): int
+    public function getMaxValue(): int
     {
-        return $this->waarde;
+        return $this->maxValue;
     }
 
     /**
-     * @param int $waarde
+     * @param int $maxValue
      */
-    public function setWaarde(int $waarde)
+    public function setMaxValue(int $maxValue)
     {
-        if ($waarde < $this->minWaarde) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de minimale waarde (\'' . $this->minWaarde . '\') niet bereikt.');
+        $this->maxValue = $maxValue;
+    }
+
+    /**
+     * @return int
+     */
+    public function getValue(): int
+    {
+        return $this->value;
+    }
+
+    /**
+     * @param int $value
+     */
+    public function setValue(int $value)
+    {
+        if ($value < $this->minValue) {
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de minimale value (\'' . $this->minValue . '\') niet bereikt.');
         }
-        if ($waarde > $this->maxWaarde) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de maximale waarde (\'' . $this->maxWaarde . '\') overschreden.');
+        if ($value > $this->maxValue) {
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de maximale value (\'' . $this->maxValue . '\') overschreden.');
         }
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 }

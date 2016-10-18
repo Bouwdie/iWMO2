@@ -16,7 +16,7 @@ abstract class AbstractLogischInteger implements LogischInteger
     /**
      * @var null
      */
-    protected $waarde = null;
+    protected $value = null;
     /**
      * @var null
      */
@@ -28,11 +28,11 @@ abstract class AbstractLogischInteger implements LogischInteger
 
     /**
      * AbstractLogischInteger constructor.
-     * @param int $waarde
+     * @param int $value
      */
-    public function __construct(int $waarde)
+    public function __construct(int $value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -40,22 +40,22 @@ abstract class AbstractLogischInteger implements LogischInteger
      */
     public function __toString()
     {
-        return (string) $this->getWaarde()->getWaarde();
+        return (string) $this->getValue()->getValue();
     }
 
     /**
      * @return Nummer
      */
-    public function getWaarde(): Nummer
+    public function getValue(): Nummer
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param int $waarde
+     * @param int $value
      */
-    public function setWaarde(int $waarde)
+    public function setValue(int $value)
     {
-        $this->waarde = new Nummer($waarde, $this->maxInclusive, $this->minInclusive);
+        $this->value = new Nummer($value, $this->maxInclusive, $this->minInclusive);
     }
 }

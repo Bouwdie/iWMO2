@@ -11,7 +11,7 @@ class Regel extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Vrije tekst (bijvoorbeeld een toelichting) in een bericht.';
+    protected static $beschrijving = 'Vrije tekst (bijvoorbeeld een toelichting) in een bericht.';
     /**
      * @var int
      */

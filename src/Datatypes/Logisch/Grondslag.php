@@ -11,7 +11,7 @@ class Grondslag extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde aanduiding wat ten grondslag ligt aan het beschikking met betrekking tot de ondersteuning voor een cliënt.';
+    protected static $beschrijving = 'Gecodeerde aanduiding wat ten grondslag ligt aan het beschikking met betrekking tot de ondersteuning voor een cliënt.';
     /**
      * @var string
      */

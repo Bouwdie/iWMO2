@@ -19,7 +19,7 @@ class Huis
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van een specifiek huis in een straat, onderdeel van het adres.';
+    protected static $beschrijving = 'Aanduiding van een specifiek huis in een straat, onderdeel van het adres.';
     /**
      * @var Huisnummer
      */

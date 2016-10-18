@@ -11,7 +11,7 @@ class RecordKenmerk extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Identificatie van het soort record in een externe-integratiebericht.';
+    protected static $beschrijving = 'Identificatie van het soort record in een externe-integratiebericht.';
     /**
      * @var int
      */

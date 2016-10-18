@@ -11,11 +11,11 @@ class COD478 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "LEEFEENHEID";
+    protected $titel = "LEEFEENHEID";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van de leefsituatie van een cliënt.";
+    protected static $beschrijving = "Gecodeerde aanduiding van de leefsituatie van een cliënt.";
 
     /**
      * Leefeenheid

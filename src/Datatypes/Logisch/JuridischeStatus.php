@@ -11,7 +11,7 @@ class JuridischeStatus extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Juridische situatie die voor de cliënt van toepassing is op het moment van indicatiestelling.';
+    protected static $beschrijving = 'Juridische situatie die voor de cliënt van toepassing is op het moment van indicatiestelling.';
     /**
      * @var string
      */

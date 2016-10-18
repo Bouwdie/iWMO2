@@ -11,7 +11,7 @@ class DatumGebruik extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Indicator die aangeeft welk deel van de voorafgaande datum gebruikt mag worden.';
+    protected static $beschrijving = 'Indicator die aangeeft welk deel van de voorafgaande datum gebruikt mag worden.';
     /**
      * @var string
      */

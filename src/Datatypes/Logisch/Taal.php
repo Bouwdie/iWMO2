@@ -13,7 +13,7 @@ class Taal extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'De taal van de cliënt waarin met de cliënt wordt gecommuniceerd.';
+    protected static $beschrijving = 'De taal van de cliënt waarin met de cliënt wordt gecommuniceerd.';
     /**
      * @var int
      */

@@ -11,7 +11,7 @@ class CommunicatieVorm extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde aanduiding van de bijzondere vorm van communicatie die gebruikt dient te worden.';
+    protected static $beschrijving = 'Gecodeerde aanduiding van de bijzondere vorm van communicatie die gebruikt dient te worden.';
     /**
      * @var string
      */

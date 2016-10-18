@@ -17,7 +17,7 @@ class Geboortedatum
     /**
      * @var string
      */
-    private $beschrijving = 'Datum waarop een natuurlijk persoon geboren is.';
+    protected static $beschrijving = 'Datum waarop een natuurlijk persoon geboren is.';
     /**
      * @var Datum|null
      */

@@ -11,7 +11,7 @@ class Huisnummer extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = "De numerieke aanduiding zoals de gemeente die aan het object heeft toegekend.";
+    protected static $beschrijving = "De numerieke aanduiding zoals de gemeente die aan het object heeft toegekend.";
     /**
      * @var int
      */

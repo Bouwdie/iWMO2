@@ -11,7 +11,7 @@ class NaamCode extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding naamgebruik (gecodeerd).';
+    protected static $beschrijving = 'Aanduiding naamgebruik (gecodeerd).';
     /**
      * @var int
      */

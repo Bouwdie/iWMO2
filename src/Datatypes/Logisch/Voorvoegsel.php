@@ -11,7 +11,7 @@ class Voorvoegsel extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Verzameling van een of meer voorzetsels/lidwoorden, die aan het significante deel van de achternaam van een persoon vooraf gaat en daar een onderdeel van is.';
+    protected static $beschrijving = 'Verzameling van een of meer voorzetsels/lidwoorden, die aan het significante deel van de achternaam van een persoon vooraf gaat en daar een onderdeel van is.';
     /**
      * @var int
      */

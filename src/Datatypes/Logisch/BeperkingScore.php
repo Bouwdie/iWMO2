@@ -11,7 +11,7 @@ class BeperkingScore extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Gecodeerde aanduiding van de score op een vraag over een beperking.';
+    protected static $beschrijving = 'Gecodeerde aanduiding van de score op een vraag over een beperking.';
     /**
      * @var string
      */

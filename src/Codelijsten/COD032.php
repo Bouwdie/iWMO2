@@ -11,11 +11,11 @@ class COD032 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "LAND";
+    protected $titel = "LAND";
     /**
      * @var string
      */
-    private $beschrijving = "Identificatie van een (historisch/actueel) land of gebiedsdeel.";
+    protected static $beschrijving = "Identificatie van een (historisch/actueel) land of gebiedsdeel.";
 
     /**
      * Land

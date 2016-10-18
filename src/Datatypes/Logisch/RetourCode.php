@@ -11,7 +11,7 @@ class RetourCode extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Melding in een iWmo-retourbericht. Het betreft een code die in een retourbericht het resultaat van de beoordeling van een (deel van een) ontvangen bericht weergeeft.';
+    protected static $beschrijving = 'Melding in een iWmo-retourbericht. Het betreft een code die in een retourbericht het resultaat van de beoordeling van een (deel van een) ontvangen bericht weergeeft.';
     /**
      * @var string
      */

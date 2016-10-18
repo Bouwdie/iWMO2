@@ -15,7 +15,7 @@ class Telefoonnummers
     /**
      * @var string
      */
-    private $beschrijving = 'De telefoonnummers waarop de cliënt of relatie van de cliënt te bereiken is.';
+    protected static $beschrijving = 'De telefoonnummers waarop de cliënt of relatie van de cliënt te bereiken is.';
     /**
      * @var Telefoon|null
      * What is with these nummeric vars?

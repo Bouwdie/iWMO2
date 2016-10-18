@@ -11,7 +11,7 @@ class Emailadres extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Het adres waaronder de cliënt/relatie cliënt via het internet per elektronische post te bereiken is.';
+    protected static $beschrijving = 'Het adres waaronder de cliënt/relatie cliënt via het internet per elektronische post te bereiken is.';
     /**
      * @var int
      */

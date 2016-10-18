@@ -11,11 +11,11 @@ class COD467 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "STATUS AANLEVERING";
+    protected $titel = "STATUS AANLEVERING";
     /**
      * @var string
      */
-    private $beschrijving = "Indicatie over de status van de informatie in het record.";
+    protected static $beschrijving = "Indicatie over de status van de informatie in het record.";
 
     /**
      * Status aanlevering

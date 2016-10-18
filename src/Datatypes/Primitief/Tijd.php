@@ -15,9 +15,9 @@ class Tijd extends Datum
     /**
      * @var string
      */
-    public $beschrijving = 'Tijd';
+    protected static $beschrijving = 'Tijd';
     /**
      * @var string
      */
-    public $formaat = 'H:i:s'; // 14:23:26
+    protected $formaat = 'H:i:s'; // 14:23:26
 }

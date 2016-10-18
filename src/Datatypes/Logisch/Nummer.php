@@ -11,7 +11,7 @@ class Nummer extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Nummer';
+    protected static $beschrijving = 'Nummer';
     /**
      * @var int
      */

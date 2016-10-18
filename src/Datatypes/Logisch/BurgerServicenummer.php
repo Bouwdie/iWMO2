@@ -11,7 +11,7 @@ class BurgerServicenummer extends AbstractLogischStringLengthPattern
     /**
      * @var string
      */
-    private $beschrijving = 'Een door de overheid toegekend identificerend nummer in het kader van het vereenvoudigen van het contact tussen overheid en burgers en het verminderen van de administratieve lasten.';
+    protected static $beschrijving = 'Een door de overheid toegekend identificerend nummer in het kader van het vereenvoudigen van het contact tussen overheid en burgers en het verminderen van de administratieve lasten.';
     /**
      * @var int
      */

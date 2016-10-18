@@ -11,11 +11,11 @@ class WMO020 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "PRODUCTCATEGORIE";
+    protected $titel = "PRODUCTCATEGORIE";
     /**
      * @var string
      */
-    private $beschrijving = "Gecodeerde aanduiding van een (reeks van) productcategorie(ën) in functionele termen die losgekoppeld is van een bepaalde leverancier, waarbij wordt beschreven wat de inhoud en aard van de productcategorie is in termen van hulpverlening (wonen, zorg en welzijn).";
+    protected static $beschrijving = "Gecodeerde aanduiding van een (reeks van) productcategorie(ën) in functionele termen die losgekoppeld is van een bepaalde leverancier, waarbij wordt beschreven wat de inhoud en aard van de productcategorie is in termen van hulpverlening (wonen, zorg en welzijn).";
 
     /**
      * Productcategorie

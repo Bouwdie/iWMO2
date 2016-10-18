@@ -11,7 +11,7 @@ class BerichtVersie extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Volgnummer van de formele uitgifte van een versie van een (externe-integratie)berichtstandaard.';
+    protected static $beschrijving = 'Volgnummer van de formele uitgifte van een versie van een (externe-integratie)berichtstandaard.';
     /**
      * @var int
      */

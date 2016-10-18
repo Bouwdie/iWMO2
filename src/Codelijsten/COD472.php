@@ -11,11 +11,11 @@ class COD472 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "SOORT RELATIE";
+    protected $titel = "SOORT RELATIE";
     /**
      * @var string
      */
-    private $beschrijving = "De soort relatie die een persoon ten opzichte van de cliënt heeft.";
+    protected static $beschrijving = "De soort relatie die een persoon ten opzichte van de cliënt heeft.";
 
     /**
      * Soort relatie

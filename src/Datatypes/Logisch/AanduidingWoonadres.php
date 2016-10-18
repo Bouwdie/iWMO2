@@ -11,7 +11,7 @@ class AanduidingWoonadres extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen.";
+    protected static $beschrijving = "De aanduiding die wordt gebruikt voor adressen die niet zijn voorzien van de gebruikelijke straatnaam en huisnummeraanduidingen.";
     /**
      * @var string
      */

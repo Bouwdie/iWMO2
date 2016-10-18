@@ -16,7 +16,7 @@ class Grondslagen
     /**
      * @var string
      */
-    private $beschrijving = 'De verzameling van coderingen wat ten grondslag ligt aan het indicatiebesluit met betrekking tot de zorg voor een cliënt.';
+    protected static $beschrijving = 'De verzameling van coderingen wat ten grondslag ligt aan het indicatiebesluit met betrekking tot de zorg voor een cliënt.';
     /**
      * @var Grondslag|null
      * WTF .. numeric vars? Who made this up?

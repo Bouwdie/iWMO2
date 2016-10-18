@@ -18,7 +18,7 @@ class Berichtidentificatie
     /**
      * @var string
      */
-    private $beschrijving = 'Naam of nummer en dagtekening ter identificatie van een totale aanlevering.';
+    protected static $beschrijving = 'Naam of nummer en dagtekening ter identificatie van een totale aanlevering.';
 
     /**
      * @var IdentificatieBericht|null

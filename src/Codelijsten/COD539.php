@@ -11,11 +11,11 @@ class COD539 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "BEPERKING";
+    protected $titel = "BEPERKING";
     /**
      * @var string
      */
-    private $beschrijving = "Aanduiding over de categorie van de beperking.";
+    protected static $beschrijving = "Aanduiding over de categorie van de beperking.";
 
     /**
      * Beperking

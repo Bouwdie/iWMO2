@@ -11,11 +11,11 @@ class WMO021 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "PRODUCTCODE";
+    protected $titel = "PRODUCTCODE";
     /**
      * @var string
      */
-    private $beschrijving = "Aanduiding van een specifiek(e) product of dienst binnen een bepaalde productcategorie t.b.v. de levering van Wmo-ondersteuning.";
+    protected static $beschrijving = "Aanduiding van een specifiek(e) product of dienst binnen een bepaalde productcategorie t.b.v. de levering van Wmo-ondersteuning.";
 
     /**
      * Productcode

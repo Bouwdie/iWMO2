@@ -11,7 +11,7 @@ class NaamVerwijzer extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'Naam of organisatienaam van de persoon of instantie die de cliënt heeft doorverwezen naar ondersteuning.';
+    protected static $beschrijving = 'Naam of organisatienaam van de persoon of instantie die de cliënt heeft doorverwezen naar ondersteuning.';
     /**
      * @var int
      */

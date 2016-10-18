@@ -17,7 +17,7 @@ class Communicatie
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding over bijzondere vorm van communicatie die gebruikt dient te worden.';
+    protected static $beschrijving = 'Aanduiding over bijzondere vorm van communicatie die gebruikt dient te worden.';
     /**
      * @var CommunicatieVorm|null
      */

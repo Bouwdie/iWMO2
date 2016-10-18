@@ -11,7 +11,7 @@ class Frequentie extends AbstractLogischStringLengthEnumeration
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de frequentie waarmee een ondersteuningsproduct geleverd wordt, onderdeel van de Omvang.';
+    protected static $beschrijving = 'Aanduiding van de frequentie waarmee een ondersteuningsproduct geleverd wordt, onderdeel van de Omvang.';
     /**
      * @var int
      */

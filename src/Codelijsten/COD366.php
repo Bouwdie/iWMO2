@@ -11,11 +11,11 @@ class COD366 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "BURGERLIJKE STAAT";
+    protected $titel = "BURGERLIJKE STAAT";
     /**
      * @var string
      */
-    private $beschrijving = "Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.";
+    protected static $beschrijving = "Unieke aanduiding die de rechtspositie van een cliënt al dan niet in relatie tot één of meer personen beschrijft.";
 
     /**
      * Burgelijke staat

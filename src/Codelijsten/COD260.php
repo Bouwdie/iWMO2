@@ -11,11 +11,11 @@ class COD260 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "JA OF NEE";
+    protected $titel = "JA OF NEE";
     /**
      * @var string
      */
-    private $beschrijving = "Codering voor ja of nee.";
+    protected static $beschrijving = "Codering voor ja of nee.";
 
     /**
      * Ja of Nee

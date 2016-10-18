@@ -19,29 +19,29 @@ abstract class AbstractEnumeration implements Enumeration
     /**
      * @var
      */
-    protected $waarde;
+    protected $value;
 
     /**
      * AbstractEnumeration constructor.
      */
     public function __construct()
     {
-        $this->setWaarde(static::code);
+        $this->setValue(static::code);
     }
 
     /**
      * @return array
      */
-    public function getWaarde(): array
+    public function getValue(): array
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param array $waarde
+     * @param array $value
      */
-    public function setWaarde(array $waarde)
+    public function setValue(array $value)
     {
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 }

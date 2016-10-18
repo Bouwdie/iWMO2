@@ -11,7 +11,7 @@ class Gemeente extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Identificatie van een gemeente die betrokken is bij de uitvoering van de Wet maatschappelijke ondersteuning (Wmo).';
+    protected static $beschrijving = 'Identificatie van een gemeente die betrokken is bij de uitvoering van de Wet maatschappelijke ondersteuning (Wmo).';
     /**
      * @var int
      */

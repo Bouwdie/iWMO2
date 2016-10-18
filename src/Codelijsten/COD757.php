@@ -11,11 +11,11 @@ class COD757 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "SOORT ADRES";
+    protected $titel = "SOORT ADRES";
     /**
      * @var string
      */
-    private $beschrijving = "Nadere typering van het adres.";
+    protected static $beschrijving = "Nadere typering van het adres.";
 
     /**
      * Soort adres

@@ -11,7 +11,7 @@ class Naam extends AbstractLogischStringLength
     /**
      * @var string
      */
-    private $beschrijving = 'De achternaam van een persoon, indien nodig verkort weergegeven.';
+    protected static $beschrijving = 'De achternaam van een persoon, indien nodig verkort weergegeven.';
     /**
      * @var int
      */

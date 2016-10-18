@@ -11,11 +11,11 @@ class COD172 extends AbstractEnumeration
     /**
      * @var string
      */
-    private $titel = "REDEN INTREKKING";
+    protected $titel = "REDEN INTREKKING";
     /**
      * @var string
      */
-    private $beschrijving = "De reden waarom een toewijzing wordt ingetrokken.";
+    protected static $beschrijving = "De reden waarom een toewijzing wordt ingetrokken.";
 
     /**
      * Reden uitkering

@@ -18,7 +18,7 @@ class Omvang
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de omvang van de te leveren of geleverde ondersteuning, uitgedrukt in Volume, Eenheid en Frequentie.';
+    protected static $beschrijving = 'Aanduiding van de omvang van de te leveren of geleverde ondersteuning, uitgedrukt in Volume, Eenheid en Frequentie.';
     /**
      * @var Volume|null
      */

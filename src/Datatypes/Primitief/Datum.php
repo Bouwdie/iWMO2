@@ -15,23 +15,23 @@ class Datum
     /**
      * @var string
      */
-    public $beschrijving = 'Datum';
+    protected static $beschrijving = 'Datum';
     /**
      * @var string
      */
-    public $formaat = 'Y-m-d'; // 2016-02-18
+    protected $formaat = 'Y-m-d'; // 2016-02-18
     /**
      * @var null
      */
-    private $waarde = null;
+    protected $value;
 
     /**
      * Datum constructor.
-     * @param $waarde
+     * @param $value
      */
-    public function __construct($waarde)
+    public function __construct($value)
     {
-        $this->setWaarde($waarde);
+        $this->setValue($value);
     }
 
     /**
@@ -39,29 +39,29 @@ class Datum
      */
     public function __toString()
     {
-        return $this->getWaarde();
+        return $this->getValue();
     }
 
     /**
      * @return string
      */
-    public function getWaarde(): string
+    public function getValue(): string
     {
-        return $this->waarde;
+        return $this->value;
     }
 
     /**
-     * @param string $waarde
+     * @param string $value
      */
-    public function setWaarde(string $waarde)
+    public function setValue(string $value)
     {
-        if (\DateTime::createFromFormat($this->formaat, $waarde) === false) {
+        if (\DateTime::createFromFormat($this->formaat, $value) === false) {
             throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide formaat opgegeven.');
         }
         $errors = \DateTime::getLastErrors();
         if (!empty($errors['warning_count'])) {
             throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide tijd buiten bereik.');
         }
-        $this->waarde = $waarde;
+        $this->value = $value;
     }
 }

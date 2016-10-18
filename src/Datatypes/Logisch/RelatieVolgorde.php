@@ -11,7 +11,7 @@ class RelatieVolgorde extends AbstractLogischInteger
     /**
      * @var string
      */
-    private $beschrijving = 'Aanduiding van de prioriteit van de contactpersoon.';
+    protected static $beschrijving = 'Aanduiding van de prioriteit van de contactpersoon.';
     /**
      * @var int
      */
