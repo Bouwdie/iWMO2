@@ -20,7 +20,7 @@ class VerkorteNaam
     /**
      * @var \Hyperized\Iwmo2\Datatypes\Composiet\Achternaam|null
      */
-    private $gelachtsNaam = null;
+    private $geslachtsNaam = null;
     /**
      * @var Voorletters|null
      * Optional
@@ -29,14 +29,14 @@ class VerkorteNaam
 
     /**
      * VerkorteNaam constructor.
-     * @param Achternaam $gelachtsNaam
+     * @param Achternaam $geslachtsNaam
      * @param Voorletters|null $voorLetters
      */
     public function __construct(
-        Achternaam $gelachtsNaam,
+        Achternaam $geslachtsNaam,
         Voorletters $voorLetters = null
     ) {
-        $this->gelachtsNaam = $gelachtsNaam;
+        $this->geslachtsNaam = $geslachtsNaam;
         if(!is_null($voorLetters)) {
             $this->voorLetters = $voorLetters;
         }
