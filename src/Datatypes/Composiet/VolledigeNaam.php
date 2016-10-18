@@ -22,19 +22,19 @@ class VolledigeNaam
     /**
      * @var Achternaam|null
      */
-    private $geslachtsnaan = null;
+    private $geslachtsnaan;
     /**
      * @var Achternaam|null
      */
-    private $partnernaam = null;
+    private $partnernaam;
     /**
      * @var Voorletters|null
      */
-    private $voorletters = null;
+    private $voorletters;
     /**
      * @var NaamCode|null
      */
-    private $naamCode = null;
+    private $naamCode;
 
     /**
      * VolledigeNaam constructor.
@@ -50,10 +50,10 @@ class VolledigeNaam
         NaamCode $naamCode)
     {
         $this->geslachtsnaan = $geslachtsnaan;
-        if(!is_null($partnernaam)) {
+        if($partnernaam !== null) {
             $this->partnernaam = $partnernaam;
         }
-        if(!is_null($voorletters)) {
+        if($voorletters !== null) {
             $this->voorletters = $voorletters;
         }
         $this->naamCode = $naamCode;

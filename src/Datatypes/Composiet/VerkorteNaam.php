@@ -20,12 +20,12 @@ class VerkorteNaam
     /**
      * @var \Hyperized\Iwmo2\Datatypes\Composiet\Achternaam|null
      */
-    private $geslachtsNaam = null;
+    private $geslachtsNaam;
     /**
      * @var Voorletters|null
      * Optional
      */
-    private $voorLetters = null;
+    private $voorLetters;
 
     /**
      * VerkorteNaam constructor.
@@ -37,7 +37,7 @@ class VerkorteNaam
         Voorletters $voorLetters = null
     ) {
         $this->geslachtsNaam = $geslachtsNaam;
-        if(!is_null($voorLetters)) {
+        if($voorLetters !== null) {
             $this->voorLetters = $voorLetters;
         }
     }

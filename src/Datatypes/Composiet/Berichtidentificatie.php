@@ -23,15 +23,15 @@ class Berichtidentificatie
     /**
      * @var IdentificatieBericht|null
      */
-    private $identificatie = null;
+    private $identificatie;
     /**
      * @var Datum|null
      */
-    private $dagtekening = null;
+    private $dagtekening;
     /**
      * @var JaNee|null
      */
-    private $tekenSet = null;
+    private $tekenSet;
 
     /**
      * Berichtidentificatie constructor.

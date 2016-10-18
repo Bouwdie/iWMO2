@@ -21,11 +21,11 @@ class Telefoon
     /**
      * @var Telefoonnummer|null
      */
-    private $telefoonNummer = null;
+    private $telefoonNummer;
     /**
      * @var Landnummer|null
      */
-    private $landNummer = null;
+    private $landNummer;
 
     /**
      * Telefoon constructor.

@@ -21,12 +21,12 @@ class Communicatie
     /**
      * @var CommunicatieVorm|null
      */
-    private $vorm = null;
+    private $vorm;
     /**
      * @var Taal|null
      * Optional
      */
-    private $taal = null;
+    private $taal;
 
     /**
      * Communicatie constructor.
@@ -38,7 +38,7 @@ class Communicatie
         Taal $taal = null
     ) {
         $this->vorm = $vorm;
-        if(!is_null($taal)) {
+        if($taal !== null) {
             $this->taal = $taal;
         }
     }

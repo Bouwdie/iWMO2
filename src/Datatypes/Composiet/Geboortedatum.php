@@ -21,12 +21,12 @@ class Geboortedatum
     /**
      * @var Datum|null
      */
-    private $datum = null;
+    private $datum;
     /**
      * @var DatumGebruik|null
      * Optional
      */
-    private $datumGebruik = null;
+    private $datumGebruik;
 
     /**
      * Geboortedatum constructor.
@@ -38,7 +38,7 @@ class Geboortedatum
         DatumGebruik $datumGebruik = null
     ) {
         $this->datum = $datum;
-        if(!is_null($datumGebruik)) {
+        if($datumGebruik !== null) {
             $this->datumGebruik = $datumGebruik;
         }
     }

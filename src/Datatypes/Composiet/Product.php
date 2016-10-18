@@ -21,12 +21,12 @@ class Product
     /**
      * @var ProductCategorie|null
      */
-    private $categorie = null;
+    private $categorie;
     /**
      * @var ProductCode|null
      * Optional
      */
-    private $code = null;
+    private $code;
 
     /**
      * Product constructor.
@@ -38,7 +38,7 @@ class Product
         ProductCode $code = null
     ) {
         $this->categorie = $categorie;
-        if(!is_null($code)) {
+        if($code !== null) {
             $this->code = $code;
         }
     }

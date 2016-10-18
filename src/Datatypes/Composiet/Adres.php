@@ -26,27 +26,27 @@ class Adres
      * @var Huis|null
      * Optional
      */
-    private $huis = null;
+    private $huis;
     /**
      * @var Postcode|null
      * Optional
      */
-    private $postcode = null;
+    private $postcode;
     /**
      * @var Straatnaam|null
      * Optional
      */
-    private $straatnaam = null;
+    private $straatnaam;
     /**
      * @var Plaatsnaam|null
      * Optional
      */
-    private $plaatsnaam = null;
+    private $plaatsnaam;
     /**
      * @var LandCode|null
      * Optional
      */
-    private $landCode = null;
+    private $landCode;
 
     /**
      * Adres constructor.
@@ -63,19 +63,19 @@ class Adres
         Plaatsnaam $plaatsnaam = null,
         LandCode $landCode = null
     ) {
-        if(!is_null($huis)) {
+        if($huis !== null) {
             $this->huis = $huis;
         }
-        if(!is_null($postcode)) {
+        if($postcode !== null) {
             $this->postcode = $postcode;
         }
-        if(!is_null($straatnaam)) {
+        if($straatnaam !== null) {
             $this->straatnaam = $straatnaam;
         }
-        if(!is_null($plaatsnaam)) {
+        if($plaatsnaam !== null) {
             $this->plaatsnaam = $plaatsnaam;
         }
-        if(!is_null($landCode)) {
+        if($landCode !== null) {
             $this->landCode = $landCode;
         }
     }
@@ -86,19 +86,19 @@ class Adres
     public function __toString()
     {
         $returnString = '';
-        if(!is_null($this->straatnaam)) {
+        if($this->straatnaam !== null) {
             $returnString .= $this->straatnaam.' ';
         }
-        if(!is_null($this->huis)) {
+        if($this->huis !== null) {
             $returnString .= $this->huis;
         }
-        if(!is_null($this->postcode)) {
+        if($this->postcode  !== null) {
             $returnString .= ', '.$this->postcode;
         }
-        if(!is_null($this->plaatsnaam)) {
+        if($this->plaatsnaam !== null) {
             $returnString .= ', '.$this->plaatsnaam;
         }
-        if(!is_null($this->landCode)) {
+        if($this->landCode !== null) {
             $returnString .= ', '.$this->landCode;
         }
         return $returnString;

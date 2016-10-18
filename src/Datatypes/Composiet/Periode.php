@@ -21,12 +21,12 @@ class Periode
      * @var Datum|null
      * Optional
      */
-    private $beginDatum = null;
+    private $beginDatum;
     /**
      * @var Datum|null
      * Optional
      */
-    private $eindDatum = null;
+    private $eindDatum;
 
     /**
      * Periode constructor.
@@ -37,10 +37,10 @@ class Periode
         Datum $beginDatum = null,
         Datum $eindDatum = null
     ) {
-        if(!is_null($beginDatum)) {
+        if($beginDatum !== null) {
             $this->beginDatum = $beginDatum;
         }
-        if(!is_null($eindDatum)) {
+        if($eindDatum !== null) {
             $this->eindDatum = $eindDatum;
         }
     }

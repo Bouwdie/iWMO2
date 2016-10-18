@@ -22,15 +22,15 @@ class Omvang
     /**
      * @var Volume|null
      */
-    private $volume = null;
+    private $volume;
     /**
      * @var Eenheid|null
      */
-    private $eenheid = null;
+    private $eenheid;
     /**
      * @var Frequentie|null
      */
-    private $frequentie = null;
+    private $frequentie;
 
     /**
      * Omvang constructor.

@@ -21,11 +21,11 @@ class Verwijzer
     /**
      * @var TypeVerwijzer|null
      */
-    private $type = null;
+    private $type;
     /**
      * @var NaamVerwijzer|null
      */
-    private $naam = null;
+    private $naam;
 
     /**
      * Verwijzer constructor.
@@ -37,7 +37,7 @@ class Verwijzer
         NaamVerwijzer $naam = null)
     {
         $this->type = $type;
-        if(!is_null($naam)) {
+        if($naam !== null) {
             $this->naam = $naam;
         }
     }

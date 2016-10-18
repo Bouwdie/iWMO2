@@ -20,12 +20,12 @@ class Telefoonnummers
      * @var Telefoon|null
      * What is with these nummeric vars?
      */
-    private $telefoon01 = null;
+    private $telefoon01;
     /**
      * @var Telefoon|null
      * Optional
      */
-    private $telefoon02 = null;
+    private $telefoon02;
 
     /**
      * Telefoonnummers constructor.
@@ -37,7 +37,7 @@ class Telefoonnummers
         Telefoon $telefoon02 = null
     ) {
         $this->telefoon01 = $telefoon01;
-        if(!is_null($telefoon02)) {
+        if($telefoon02 !== null) {
             $this->telefoon02 = $telefoon02;
         }
     }

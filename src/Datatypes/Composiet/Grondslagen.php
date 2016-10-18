@@ -21,12 +21,12 @@ class Grondslagen
      * @var Grondslag|null
      * WTF .. numeric vars? Who made this up?
      */
-    private $grondslag01 = null;
+    private $grondslag01;
     /**
      * @var Grondslag|null
      * Optional
      */
-    private $grondslag02 = null;
+    private $grondslag02;
 
     /**
      * Grondslagen constructor.
@@ -38,7 +38,7 @@ class Grondslagen
         Grondslag $grondslag02 = null
     ) {
         $this->grondslag01 = $grondslag01;
-        if(!is_null($grondslag02)) {
+        if($grondslag02 !== null) {
             $this->grondslag02 = $grondslag02;
         }
     }

@@ -23,16 +23,16 @@ class Berichtspecificatie
     /**
      * @var BerichtCode|null
      */
-    private $code = null;
+    private $code;
     /**
      * @var BerichtVersie|null
      */
-    private $versie = null;
+    private $versie;
     /**
      * @var BerichtSubversie|null
      * Optional
      */
-    private $subVersie = null;
+    private $subVersie;
 
     /**
      * Berichtspecificatie constructor.
@@ -47,7 +47,7 @@ class Berichtspecificatie
     ) {
         $this->code = $code;
         $this->versie = $versie;
-        if(!is_null($subVersie)) {
+        if($subVersie !== null) {
             $this->subVersie = $subVersie;
         }
     }

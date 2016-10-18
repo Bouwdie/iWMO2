@@ -22,16 +22,16 @@ class Achternaam
     /**
      * @var Naam|null
      */
-    private $naam = null;
+    private $naam;
     /**
      * @var Voorvoegsel|null
      * Optional
      */
-    private $voorvoegsel = null;
+    private $voorvoegsel;
     /**
      * @var NaamCode|null
      */
-    private $naamCode = null;
+    private $naamCode;
 
     /**
      * Achternaam constructor.
@@ -45,7 +45,7 @@ class Achternaam
         NaamCode $naamCode
     ) {
         $this->naam = $naam;
-        if(!is_null($voorvoegsel)) {
+        if($voorvoegsel !== null) {
             $this->voorvoegsel = $voorvoegsel;
         }
         $this->naamCode = $naamCode;
@@ -56,7 +56,7 @@ class Achternaam
      */
     public function __toString()
     {
-        if(!is_null($this->voorvoegsel)) {
+        if($this->voorvoegsel !== null) {
             return $this->voorvoegsel->getValue()->getValue().' '.$this->naam->getValue()->getValue();
         }
         return $this->naam->getValue()->getValue();

@@ -22,11 +22,11 @@ class Commentaar
     /**
      * @var Regelnummer|null
      */
-    private $nummer = null;
+    private $nummer;
     /**
      * @var Regel|null
      */
-    private $regel = null;
+    private $regel;
 
     /**
      * Commentaar constructor.

@@ -71,13 +71,13 @@ class Huis
     public function __toString()
     {
         $returnString = $this->huisnummer;
-        if(!is_null($this->huisletter)) {
+        if($this->huisletter !== null) {
             $returnString .= $this->huisletter;
         }
-        if(!is_null($this->huisnummerToevoeging)) {
+        if($this->huisnummerToevoeging !== null) {
             $returnString .= ' '.$this->huisnummerToevoeging;
         }
-        if(!is_null($this->aanduidingWoonadres)) {
+        if($this->aanduidingWoonadres !== null) {
             $returnString .= ' '.$this->aanduidingWoonadres.'';
         }
         return $returnString;
