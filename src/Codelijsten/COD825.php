@@ -11,7 +11,7 @@ class COD825 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "VRAAG BEPERKING";
+    protected static $titel = "VRAAG BEPERKING";
     /**
      * @var string
      */

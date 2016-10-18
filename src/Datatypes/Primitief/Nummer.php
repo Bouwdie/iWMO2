@@ -19,15 +19,15 @@ class Nummer
     /**
      * @var null
      */
-    private $value;
+    protected $value;
     /**
      * @var int
      */
-    private $maxValue = PHP_INT_MAX;
+    protected $maxValue = PHP_INT_MAX;
     /**
      * @var int
      */
-    private $minValue = PHP_INT_MIN;
+    protected $minValue = PHP_INT_MIN;
 
     /**
      * Nummer constructor.

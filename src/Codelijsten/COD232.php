@@ -11,7 +11,7 @@ class COD232 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "JURIDISCHE STATUS";
+    protected static $titel = "JURIDISCHE STATUS";
     /**
      * @var string
      */

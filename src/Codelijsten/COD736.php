@@ -11,7 +11,7 @@ class COD736 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "GRONDSLAG ZORG";
+    protected static $titel = "GRONDSLAG ZORG";
     /**
      * @var string
      */

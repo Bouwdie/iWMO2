@@ -11,7 +11,7 @@ class COD700 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "NAAMCODE";
+    protected static $titel = "NAAMCODE";
     /**
      * @var string
      */

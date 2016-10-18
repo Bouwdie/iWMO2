@@ -11,7 +11,7 @@ class COD539 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "BEPERKING";
+    protected static $titel = "BEPERKING";
     /**
      * @var string
      */

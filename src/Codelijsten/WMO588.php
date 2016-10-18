@@ -11,7 +11,7 @@ class WMO588 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "REDENBEEINDIGING";
+    protected static $titel = "REDENBEEINDIGING";
     /**
      * @var string
      */

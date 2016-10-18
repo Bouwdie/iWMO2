@@ -11,7 +11,7 @@ class COD828 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "SCORE VRAAG BEPERKING";
+    protected static $titel = "SCORE VRAAG BEPERKING";
     /**
      * @var string
      */

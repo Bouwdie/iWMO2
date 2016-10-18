@@ -11,7 +11,7 @@ class COD002 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "BERICHT";
+    protected static $titel = "BERICHT";
     /**
      * @var string
      */

@@ -11,7 +11,7 @@ class COD172 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "REDEN INTREKKING";
+    protected static $titel = "REDEN INTREKKING";
     /**
      * @var string
      */

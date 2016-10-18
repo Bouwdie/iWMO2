@@ -11,7 +11,7 @@ class COD366 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "BURGERLIJKE STAAT";
+    protected static $titel = "BURGERLIJKE STAAT";
     /**
      * @var string
      */

@@ -11,7 +11,7 @@ class COD046 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "GESLACHT";
+    protected static $titel = "GESLACHT";
     /**
      * @var string
      */

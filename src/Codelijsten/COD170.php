@@ -11,7 +11,7 @@ class COD170 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "DATUMGEBRUIK";
+    protected static $titel = "DATUMGEBRUIK";
     /**
      * @var string
      */

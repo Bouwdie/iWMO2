@@ -11,7 +11,7 @@ class WMO757 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "FREQUENTIE";
+    protected static $titel = "FREQUENTIE";
     /**
      * @var string
      */

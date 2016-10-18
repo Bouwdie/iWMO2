@@ -11,7 +11,7 @@ class COD260 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "JA OF NEE";
+    protected static $titel = "JA OF NEE";
     /**
      * @var string
      */

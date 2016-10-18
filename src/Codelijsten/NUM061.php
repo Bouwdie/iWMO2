@@ -11,7 +11,7 @@ class NUM061 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "AANDUIDING WOONADRES";
+    protected static $titel = "AANDUIDING WOONADRES";
     /**
      * @var string
      */

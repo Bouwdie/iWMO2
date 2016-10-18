@@ -35,10 +35,10 @@ trait Meta
      */
     public function getTitel()
     {
-        if (!isset($this->titel)) {
+        if (!isset($this::$titel)) {
             $reflection = new \ReflectionClass($this);
-            $this->titel = $reflection->getShortName();
+            return $reflection->getShortName();
         }
-        return $this->titel;
+        return $this::$titel;
     }
 }

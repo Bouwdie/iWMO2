@@ -11,7 +11,7 @@ class WMO756 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "EENHEID";
+    protected static $titel = "EENHEID";
     /**
      * @var string
      */

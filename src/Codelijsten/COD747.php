@@ -11,7 +11,7 @@ class COD747 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "COMMUNICATIEVORM";
+    protected static $titel = "COMMUNICATIEVORM";
     /**
      * @var string
      */

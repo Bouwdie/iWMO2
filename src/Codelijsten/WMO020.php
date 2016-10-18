@@ -11,7 +11,7 @@ class WMO020 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "PRODUCTCATEGORIE";
+    protected static $titel = "PRODUCTCATEGORIE";
     /**
      * @var string
      */

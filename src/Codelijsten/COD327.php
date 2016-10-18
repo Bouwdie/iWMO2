@@ -11,7 +11,7 @@ class COD327 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "CODE VERWIJZER";
+    protected static $titel = "CODE VERWIJZER";
     /**
      * @var string
      */

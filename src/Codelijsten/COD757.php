@@ -11,7 +11,7 @@ class COD757 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "SOORT ADRES";
+    protected static $titel = "SOORT ADRES";
     /**
      * @var string
      */

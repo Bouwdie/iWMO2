@@ -11,7 +11,7 @@ class WJ001 extends AbstractEnumeration
     /**
      * @var string
      */
-    protected $titel = "RETOURCODE";
+    protected static $titel = "RETOURCODE";
     /**
      * @var string
      */
