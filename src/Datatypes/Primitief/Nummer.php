@@ -103,10 +103,10 @@ class Nummer
     public function setValue(int $value)
     {
         if ($value < $this->minValue) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de minimale value (\'' . $this->minValue . '\') niet bereikt.');
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' heeft de minimale value (\'' . $this->minValue . '\') niet bereikt.');
         }
         if ($value > $this->maxValue) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' heeft de maximale value (\'' . $this->maxValue . '\') overschreden.');
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' heeft de maximale value (\'' . $this->maxValue . '\') overschreden.');
         }
         $this->value = $value;
     }

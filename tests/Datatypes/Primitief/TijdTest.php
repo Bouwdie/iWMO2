@@ -2,9 +2,15 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
-
+/**
+ * Class TijdTest
+ * @package Hyperized\Iwmo2\Datatypes\Primitief
+ */
 class TijdTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var
+     */
     protected $object;
 
     public function testInstanceOf()
@@ -34,6 +40,6 @@ class TijdTest extends \PHPUnit_Framework_TestCase
 
     public function testGetter() {
         $this->object = new Tijd(date('H:i:s'));
-        $this->assertSame($this->object->getWaarde(), date('H:i:s'));
+        $this->assertSame($this->object->getValue(), date('H:i:s'));
     }
 }

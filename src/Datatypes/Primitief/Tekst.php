@@ -90,7 +90,7 @@ class Tekst
     public function setValue($value)
     {
         if (strlen($value) > $this->maxLength) {
-            throw new \InvalidArgumentException('Opgegeven value is groter dan ' . $this->maxLength . ' in primitief datatype ' . $this->beschrijving);
+            throw new \InvalidArgumentException('Opgegeven value is groter dan ' . $this->maxLength . ' in primitief datatype ' . $this::$beschrijving);
         }
         $this->value = $value;
     }

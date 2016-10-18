@@ -2,14 +2,21 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
+/**
+ * Class DateTest
+ * @package Hyperized\Iwmo2\Datatypes\Primitief
+ */
 class DateTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var
+     */
     protected $object;
 
     public function testInstanceOf()
     {
         $this->object = new Datum(date('Y-m-d'));
-        $this->assertInstanceOf(Datum::class, $this->object);
+        static::assertInstanceOf(Datum::class, $this->object);
     }
 
     public function testCorrectRange() {
@@ -33,6 +40,6 @@ class DateTest extends \PHPUnit_Framework_TestCase
 
     public function testGetter() {
         $this->object = new Datum(date('Y-m-d'));
-        $this->assertSame($this->object->getWaarde(), date('Y-m-d'));
+        static::assertSame($this->object->getValue(), date('Y-m-d'));
     }
 }

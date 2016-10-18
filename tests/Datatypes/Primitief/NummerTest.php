@@ -2,9 +2,15 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
-
+/**
+ * Class NummerTest
+ * @package Hyperized\Iwmo2\Datatypes\Primitief
+ */
 class NummerTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var
+     */
     protected $object;
 
     public function testInstanceOf()
@@ -34,6 +40,6 @@ class NummerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetter() {
         $this->object = new Nummer(42);
-        $this->assertSame($this->object->getWaarde(), 42);
+        $this->assertSame($this->object->getValue(), 42);
     }
 }

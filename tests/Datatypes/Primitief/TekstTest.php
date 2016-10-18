@@ -2,9 +2,15 @@
 
 namespace Hyperized\Iwmo2\Datatypes\Primitief;
 
-
+/**
+ * Class TekstTest
+ * @package Hyperized\Iwmo2\Datatypes\Primitief
+ */
 class TekstTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var
+     */
     protected $object;
 
     public function testTekstInstanceOf()

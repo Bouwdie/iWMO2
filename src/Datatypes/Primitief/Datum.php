@@ -56,11 +56,11 @@ class Datum
     public function setValue(string $value)
     {
         if (\DateTime::createFromFormat($this->formaat, $value) === false) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide formaat opgegeven.');
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' met een invalide formaat opgegeven.');
         }
         $errors = \DateTime::getLastErrors();
         if (!empty($errors['warning_count'])) {
-            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this->beschrijving . '\' met een invalide tijd buiten bereik.');
+            throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' met een invalide tijd buiten bereik.');
         }
         $this->value = $value;
     }
