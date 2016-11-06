@@ -15,7 +15,7 @@ class CizCode extends AbstractLogischInteger
     /**
      * @var int
      */
-    protected $maxInclusive =-9999;
+    protected $maxInclusive = -9999;
     /**
      * @var int
      */

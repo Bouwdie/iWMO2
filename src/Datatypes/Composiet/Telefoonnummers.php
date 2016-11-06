@@ -37,7 +37,7 @@ class Telefoonnummers
         Telefoon $telefoon02 = null
     ) {
         $this->telefoon01 = $telefoon01;
-        if($telefoon02 !== null) {
+        if ($telefoon02 !== null) {
             $this->telefoon02 = $telefoon02;
         }
     }

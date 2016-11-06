@@ -37,7 +37,7 @@ class Verwijzer
         NaamVerwijzer $naam = null)
     {
         $this->type = $type;
-        if($naam !== null) {
+        if ($naam !== null) {
             $this->naam = $naam;
         }
     }

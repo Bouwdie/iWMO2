@@ -15,7 +15,7 @@ abstract class AbstractEnumeration implements Enumeration
     /**
      * @const array
      */
-    const code = [];
+    const code = [ ];
     /**
      * @var
      */

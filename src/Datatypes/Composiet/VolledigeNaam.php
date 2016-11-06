@@ -50,10 +50,10 @@ class VolledigeNaam
         NaamCode $naamCode)
     {
         $this->geslachtsnaan = $geslachtsnaan;
-        if($partnernaam !== null) {
+        if ($partnernaam !== null) {
             $this->partnernaam = $partnernaam;
         }
-        if($voorletters !== null) {
+        if ($voorletters !== null) {
             $this->voorletters = $voorletters;
         }
         $this->naamCode = $naamCode;

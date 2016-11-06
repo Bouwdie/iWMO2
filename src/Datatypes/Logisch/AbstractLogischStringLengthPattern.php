@@ -38,7 +38,7 @@ abstract class AbstractLogischStringLengthPattern implements LogischString
     }
 
     /**
-     * @return string
+     * @return Tekst
      */
     public function __toString()
     {

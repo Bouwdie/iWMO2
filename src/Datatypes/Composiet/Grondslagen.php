@@ -38,7 +38,7 @@ class Grondslagen
         Grondslag $grondslag02 = null
     ) {
         $this->grondslag01 = $grondslag01;
-        if($grondslag02 !== null) {
+        if ($grondslag02 !== null) {
             $this->grondslag02 = $grondslag02;
         }
     }

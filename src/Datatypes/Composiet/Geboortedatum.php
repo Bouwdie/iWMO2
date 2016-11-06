@@ -38,7 +38,7 @@ class Geboortedatum
         DatumGebruik $datumGebruik = null
     ) {
         $this->datum = $datum;
-        if($datumGebruik !== null) {
+        if ($datumGebruik !== null) {
             $this->datumGebruik = $datumGebruik;
         }
     }

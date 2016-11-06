@@ -38,7 +38,7 @@ class Communicatie
         Taal $taal = null
     ) {
         $this->vorm = $vorm;
-        if($taal !== null) {
+        if ($taal !== null) {
             $this->taal = $taal;
         }
     }

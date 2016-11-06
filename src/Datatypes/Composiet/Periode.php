@@ -37,10 +37,10 @@ class Periode
         Datum $beginDatum = null,
         Datum $eindDatum = null
     ) {
-        if($beginDatum !== null) {
+        if ($beginDatum !== null) {
             $this->beginDatum = $beginDatum;
         }
-        if($eindDatum !== null) {
+        if ($eindDatum !== null) {
             $this->eindDatum = $eindDatum;
         }
     }

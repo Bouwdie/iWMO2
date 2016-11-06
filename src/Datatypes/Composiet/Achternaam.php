@@ -45,7 +45,7 @@ class Achternaam
         NaamCode $naamCode
     ) {
         $this->naam = $naam;
-        if($voorvoegsel !== null) {
+        if ($voorvoegsel !== null) {
             $this->voorvoegsel = $voorvoegsel;
         }
         $this->naamCode = $naamCode;
@@ -56,8 +56,8 @@ class Achternaam
      */
     public function __toString()
     {
-        if($this->voorvoegsel !== null) {
-            return $this->voorvoegsel->getValue()->getValue().' '.$this->naam->getValue()->getValue();
+        if ($this->voorvoegsel !== null) {
+            return $this->voorvoegsel->getValue()->getValue() . ' ' . $this->naam->getValue()->getValue();
         }
         return $this->naam->getValue()->getValue();
     }

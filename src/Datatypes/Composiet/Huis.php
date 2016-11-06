@@ -54,13 +54,13 @@ class Huis
         AanduidingWoonadres $aanduidingWoonadres = null
     ) {
         $this->huisnummer = $huisnummer;
-        if(!is_null($huisletter)){
+        if (!is_null($huisletter)) {
             $this->huisletter = $huisletter;
         }
-        if(!is_null($huisnummertoevoeging)) {
+        if (!is_null($huisnummertoevoeging)) {
             $this->huisnummerToevoeging = $huisnummertoevoeging;
         }
-        if(!is_null($aanduidingWoonadres)) {
+        if (!is_null($aanduidingWoonadres)) {
             $this->aanduidingWoonadres = $aanduidingWoonadres;
         }
     }
@@ -71,14 +71,14 @@ class Huis
     public function __toString()
     {
         $returnString = $this->huisnummer;
-        if($this->huisletter !== null) {
+        if ($this->huisletter !== null) {
             $returnString .= $this->huisletter;
         }
-        if($this->huisnummerToevoeging !== null) {
-            $returnString .= ' '.$this->huisnummerToevoeging;
+        if ($this->huisnummerToevoeging !== null) {
+            $returnString .= ' ' . $this->huisnummerToevoeging;
         }
-        if($this->aanduidingWoonadres !== null) {
-            $returnString .= ' '.$this->aanduidingWoonadres.'';
+        if ($this->aanduidingWoonadres !== null) {
+            $returnString .= ' ' . $this->aanduidingWoonadres . '';
         }
         return $returnString;
     }

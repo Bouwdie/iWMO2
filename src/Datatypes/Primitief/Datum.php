@@ -27,7 +27,7 @@ class Datum
 
     /**
      * Datum constructor.
-     * @param $value
+     * @param string $value
      */
     public function __construct($value)
     {
@@ -59,7 +59,7 @@ class Datum
             throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' met een invalide formaat opgegeven.');
         }
         $errors = \DateTime::getLastErrors();
-        if (!empty($errors['warning_count'])) {
+        if (!empty($errors[ 'warning_count' ])) {
             throw new \InvalidArgumentException('Primitieve Datatype \'' . $this::$beschrijving . '\' met een invalide tijd buiten bereik.');
         }
         $this->value = $value;

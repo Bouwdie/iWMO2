@@ -38,7 +38,7 @@ class Product
         ProductCode $code = null
     ) {
         $this->categorie = $categorie;
-        if($code !== null) {
+        if ($code !== null) {
             $this->code = $code;
         }
     }

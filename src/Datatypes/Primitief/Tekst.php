@@ -85,7 +85,7 @@ class Tekst
     }
 
     /**
-     * @param $value
+     * @param string $value
      */
     public function setValue($value)
     {
@@ -161,7 +161,7 @@ class Tekst
     public function setEnumValue()
     {
         $enumValue = $this->enumerations->getValue();
-        $this->enumValue = $enumValue[$this->value];
+        $this->enumValue = $enumValue[ $this->value ];
     }
 
     /**
@@ -177,9 +177,9 @@ class Tekst
      */
     public function setPattern(string $pattern)
     {
-        preg_match('/'.$pattern.'/', $this->value, $matches);
-        if(!in_array($this->value, $matches)) {
-            throw new \InvalidArgumentException('Opgegeven value past niet in patroon: '.$pattern.'.');
+        preg_match('/' . $pattern . '/', $this->value, $matches);
+        if (!in_array($this->value, $matches)) {
+            throw new \InvalidArgumentException('Opgegeven value past niet in patroon: ' . $pattern . '.');
         }
         $this->pattern = $pattern;
     }

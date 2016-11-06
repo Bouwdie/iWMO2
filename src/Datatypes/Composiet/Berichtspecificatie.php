@@ -47,7 +47,7 @@ class Berichtspecificatie
     ) {
         $this->code = $code;
         $this->versie = $versie;
-        if($subVersie !== null) {
+        if ($subVersie !== null) {
             $this->subVersie = $subVersie;
         }
     }

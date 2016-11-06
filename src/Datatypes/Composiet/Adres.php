@@ -63,19 +63,19 @@ class Adres
         Plaatsnaam $plaatsnaam = null,
         LandCode $landCode = null
     ) {
-        if($huis !== null) {
+        if ($huis !== null) {
             $this->huis = $huis;
         }
-        if($postcode !== null) {
+        if ($postcode !== null) {
             $this->postcode = $postcode;
         }
-        if($straatnaam !== null) {
+        if ($straatnaam !== null) {
             $this->straatnaam = $straatnaam;
         }
-        if($plaatsnaam !== null) {
+        if ($plaatsnaam !== null) {
             $this->plaatsnaam = $plaatsnaam;
         }
-        if($landCode !== null) {
+        if ($landCode !== null) {
             $this->landCode = $landCode;
         }
     }
@@ -86,20 +86,20 @@ class Adres
     public function __toString()
     {
         $returnString = '';
-        if($this->straatnaam !== null) {
-            $returnString .= $this->straatnaam.' ';
+        if ($this->straatnaam !== null) {
+            $returnString .= $this->straatnaam . ' ';
         }
-        if($this->huis !== null) {
+        if ($this->huis !== null) {
             $returnString .= $this->huis;
         }
-        if($this->postcode  !== null) {
-            $returnString .= ', '.$this->postcode;
+        if ($this->postcode !== null) {
+            $returnString .= ', ' . $this->postcode;
         }
-        if($this->plaatsnaam !== null) {
-            $returnString .= ', '.$this->plaatsnaam;
+        if ($this->plaatsnaam !== null) {
+            $returnString .= ', ' . $this->plaatsnaam;
         }
-        if($this->landCode !== null) {
-            $returnString .= ', '.$this->landCode;
+        if ($this->landCode !== null) {
+            $returnString .= ', ' . $this->landCode;
         }
         return $returnString;
     }

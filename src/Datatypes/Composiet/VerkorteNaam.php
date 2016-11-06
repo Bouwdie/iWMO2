@@ -37,7 +37,7 @@ class VerkorteNaam
         Voorletters $voorLetters = null
     ) {
         $this->geslachtsNaam = $geslachtsNaam;
-        if($voorLetters !== null) {
+        if ($voorLetters !== null) {
             $this->voorLetters = $voorLetters;
         }
     }
