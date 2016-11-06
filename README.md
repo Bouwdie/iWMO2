@@ -1,2 +1,2 @@
-# iWMO2 [![Build Status](https://travis-ci.org/hyperized/iWMO2.svg?branch=master)](https://travis-ci.org/hyperized/iWMO2)
+# iWMO2 [![Build Status](https://travis-ci.org/hyperized/iWMO2.svg?branch=master)](https://travis-ci.org/hyperized/iWMO2) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hyperized/iWMO2/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hyperized/iWMO2/?branch=master)
 An iWMO2 library for PHP7.
